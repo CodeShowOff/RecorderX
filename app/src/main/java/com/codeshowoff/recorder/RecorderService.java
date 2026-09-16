@@ -1,0 +1,696 @@
+package com.codeshowoff.recorder;
+
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.app.Service;
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.ServiceInfo;
+import android.graphics.Bitmap;
+import android.media.ThumbnailUtils;
+import android.net.Uri;
+import android.os.Build;
+import android.os.IBinder;
+import android.provider.MediaStore;
+import android.util.Log;
+import androidx.annotation.Nullable;
+import androidx.core.app.NotificationCompat;
+import androidx.core.content.FileProvider;
+import java.io.File;
+
+public class RecorderService extends Service {
+    private static final String TAG = "RecorderX_Service";
+    private static final int NOTIFICATION_ID = 1;
+    private static final int SAVED_NOTIFICATION_ID = 2;
+    private static final String CHANNEL_ID = "recorder_channel";
+    private static final String SAVED_CHANNEL_ID = "saved_channel";
+
+    public static final String ACTION_START = "ACTION_START";
+    public static final String ACTION_STOP = "ACTION_STOP";
+    public static final String ACTION_PAUSE = "ACTION_PAUSE";
+    public static final String ACTION_RESUME = "ACTION_RESUME";
+    public static final String ACTION_DELETE = "ACTION_DELETE";
+    public static final String ACTION_TOGGLE_BUBBLE = "ACTION_TOGGLE_BUBBLE";
+    public static final String EXTRA_RESULT_CODE = "EXTRA_RESULT_CODE";
+    public static final String EXTRA_DATA = "EXTRA_DATA";
+
+    private static boolean isRecording = false;
+    private static int resultCode;
+    private static Intent projectionData;
+    private static RecorderService activeInstance;
+
+    public static RecorderService getInstance() {
+        return activeInstance;
+    }
+
+    private RecordingSession recordingSession;
+    private FloatingController floatingController;
+    private boolean isBubbleHidden = false;
+    private android.os.PowerManager.WakeLock wakeLock;
+    private boolean isTaskRemovedFromRecents = false;
+
+    @SuppressWarnings("deprecation")
+    private void acquireWakeLock() {
+        if (wakeLock == null) {
+            try {
+                android.os.PowerManager pm = (android.os.PowerManager) getSystemService(Context.POWER_SERVICE);
+                if (pm != null) {
+                    wakeLock = pm.newWakeLock(android.os.PowerManager.SCREEN_BRIGHT_WAKE_LOCK | android.os.PowerManager.ON_AFTER_RELEASE, "RecorderX:ScreenWakeLock");
+                    wakeLock.acquire(10 * 60 * 60 * 1000L);
+                    Log.d(TAG, "Screen WakeLock acquired successfully.");
+                }
+            } catch (Exception e) {
+                Log.e(TAG, "Failed to acquire Screen WakeLock", e);
+            }
+        }
+    }
+
+    private void releaseWakeLock() {
+        if (wakeLock != null) {
+            try {
+                if (wakeLock.isHeld()) {
+                    wakeLock.release();
+                    Log.d(TAG, "WakeLock released.");
+                }
+            } catch (Exception e) {
+                Log.e(TAG, "Failed to release WakeLock", e);
+            }
+            wakeLock = null;
+        }
+    }
+
+    public interface RecordingStateListener {
+        void onStateChanged(boolean isRecording);
+    }
+
+    private static final java.util.List<RecordingStateListener> stateListeners = new java.util.ArrayList<>();
+
+    public static void registerStateListener(RecordingStateListener listener) {
+        synchronized (stateListeners) {
+            stateListeners.add(listener);
+            listener.onStateChanged(isRecording);
+        }
+    }
+
+    public static void unregisterStateListener(RecordingStateListener listener) {
+        synchronized (stateListeners) {
+            stateListeners.remove(listener);
+        }
+    }
+
+    private void notifyStateChanged() {
+        synchronized (stateListeners) {
+            new android.os.Handler(android.os.Looper.getMainLooper()).post(() -> {
+                synchronized (stateListeners) {
+                    for (RecordingStateListener listener : stateListeners) {
+                        listener.onStateChanged(isRecording);
+                    }
+                }
+            });
+        }
+        QuickRecordWidgetProvider.updateAllWidgets(this);
+        ControlCenterWidgetProvider.updateAllWidgets(this);
+    }
+
+    public static boolean isRecording() { return isRecording; }
+
+    public static void setProjectionData(int code, Intent data) {
+        resultCode = code;
+        projectionData = data;
+    }
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        activeInstance = this;
+    }
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(LocaleManager.updateResources(newBase));
+    }
+
+    @Override
+    public int onStartCommand(Intent intent, int flags, int startId) {
+        String action = intent != null ? intent.getAction() : null;
+        Log.d(TAG, "onStartCommand: Action = " + action);
+
+        if (ACTION_START.equals(action)) {
+            createNotificationChannels();
+            Notification notification = createNotification();
+            try {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                    int type = ServiceInfo.FOREGROUND_SERVICE_TYPE_MEDIA_PROJECTION;
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                        SettingsManager settings = new SettingsManager(this);
+                        if (settings.getAudioSource() == 1 || settings.getAudioSource() == 3) {
+                            type |= ServiceInfo.FOREGROUND_SERVICE_TYPE_MICROPHONE;
+                        }
+                    }
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
+                        if (checkSelfPermission(android.Manifest.permission.CAMERA) == android.content.pm.PackageManager.PERMISSION_GRANTED) {
+                            type |= ServiceInfo.FOREGROUND_SERVICE_TYPE_CAMERA;
+                        }
+                    }
+                    startForeground(NOTIFICATION_ID, notification, type);
+                } else {
+                    startForeground(NOTIFICATION_ID, notification);
+                }
+                startRecording(intent);
+            } catch (Exception e) {
+                Log.e(TAG, "Failed to start foreground service", e);
+            }
+        } else if (ACTION_STOP.equals(action)) {
+            stopRecording();
+        } else if (ACTION_PAUSE.equals(action)) {
+            pauseRecording();
+        } else if (ACTION_RESUME.equals(action)) {
+            resumeRecording();
+        } else if (ACTION_TOGGLE_BUBBLE.equals(action)) {
+            toggleBubbleVisibility();
+        } else if (ACTION_DELETE.equals(action)) {
+            String deleteUriStr = intent.getStringExtra("delete_uri");
+            String deletePath = intent.getStringExtra("delete_path");
+            deleteRecordingFile(deleteUriStr, deletePath);
+            NotificationManager manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+            if (manager != null) {
+                manager.cancel(SAVED_NOTIFICATION_ID);
+            }
+            if (!isRecording) {
+                stopForeground(true);
+                stopSelf();
+            }
+        }
+
+        return START_NOT_STICKY;
+    }
+
+    private void toggleBubbleVisibility() {
+        if (floatingController == null) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && !android.provider.Settings.canDrawOverlays(this)) {
+                Log.w(TAG, "Cannot show floating control: overlay permission not granted");
+                return;
+            }
+            floatingController = new FloatingController(this);
+            floatingController.show();
+            isBubbleHidden = false;
+        } else {
+            isBubbleHidden = !isBubbleHidden;
+            if (isBubbleHidden) {
+                floatingController.hide();
+            } else {
+                floatingController.show();
+            }
+        }
+        updateNotificationPaused(recordingSession != null && recordingSession.isPaused());
+    }
+
+    private void startRecording(Intent intent) {
+        if (isRecording) return;
+
+        if (recordingSession != null) {
+            Log.w(TAG, "Releasing a leftover session before starting a new one");
+            recordingSession.stop();
+            recordingSession = null;
+        }
+
+        int currentResultCode = intent != null ? intent.getIntExtra(EXTRA_RESULT_CODE, resultCode) : resultCode;
+        Intent currentData = intent != null ? intent.getParcelableExtra(EXTRA_DATA) : null;
+        if (currentData == null) currentData = projectionData;
+
+        Log.d(TAG, "Acquiring MediaProjection with ResultCode=" + currentResultCode);
+        android.media.projection.MediaProjectionManager projectionManager = (android.media.projection.MediaProjectionManager) getSystemService(Context.MEDIA_PROJECTION_SERVICE);
+        android.media.projection.MediaProjection mediaProjection = projectionManager.getMediaProjection(currentResultCode, currentData);
+
+        if (mediaProjection != null) {
+            Log.i(TAG, "Starting recording session...");
+            SettingsManager settings = new SettingsManager(this);
+            recordingSession = new RecordingSession(this, mediaProjection, settings);
+            recordingSession.setListener(() -> {
+                Log.i(TAG, "Listener: System stopped projection. Terminating service...");
+                stopRecording();
+            });
+            try {
+                recordingSession.start();
+                acquireWakeLock();
+                isRecording = true;
+                isTaskRemovedFromRecents = false;
+                isBubbleHidden = false;
+                notifyStateChanged();
+
+                if (settings.isFloatingControlEnabled()) {
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && !android.provider.Settings.canDrawOverlays(this)) {
+                        Log.w(TAG, "Cannot show floating control: overlay permission not granted");
+                    } else {
+                        floatingController = new FloatingController(this);
+                        floatingController.show();
+                    }
+                }
+
+                if (settings.isCameraOverlayEnabled()) {
+                    if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M || android.provider.Settings.canDrawOverlays(this)) {
+                        if (androidx.core.content.ContextCompat.checkSelfPermission(this, android.Manifest.permission.CAMERA) == android.content.pm.PackageManager.PERMISSION_GRANTED) {
+                            CameraOverlayController.getInstance(this).show();
+                        }
+                    }
+                }
+            } catch (Exception e) {
+                Log.e(TAG, "Error in startRecording", e);
+                if (recordingSession != null) {
+                    recordingSession.stop();
+                    recordingSession = null;
+                }
+                stopForeground(true);
+                stopSelf();
+            }
+        } else {
+            Log.e(TAG, "MediaProjection unavailable, aborting");
+            stopForeground(true);
+            stopSelf();
+        }
+    }
+
+    private void stopRecording() {
+        if (!isRecording && recordingSession == null && floatingController == null) return;
+        Log.i(TAG, "Stopping recording service...");
+
+        if (floatingController != null) {
+            floatingController.dismiss();
+            floatingController = null;
+        }
+        if (CameraOverlayController.isOverlayShowing()) {
+            CameraOverlayController.getInstance(this).dismiss();
+        }
+        isBubbleHidden = false;
+
+        if (recordingSession != null) {
+            String lastPath = recordingSession.getOutputFilePath();
+            Uri lastUri = recordingSession.getOutputUri();
+            recordingSession.stop();
+            recordingSession = null;
+
+            if (lastPath != null || lastUri != null) {
+                showSavedNotification(lastPath, lastUri);
+            }
+        }
+
+        isRecording = false;
+        notifyStateChanged();
+        releaseWakeLock();
+        stopForeground(true);
+        stopSelf();
+
+        if (isTaskRemovedFromRecents || !MainActivity.isActivityVisible()) {
+            MainActivity.finishIfOpen();
+        }
+    }
+
+    public boolean isPaused() {
+        return recordingSession != null && recordingSession.isPaused();
+    }
+
+    public long getActiveRecordingDurationMs() {
+        return recordingSession != null ? recordingSession.getActiveDurationMs() : 0;
+    }
+
+    public void takeScreenshot(Runnable onCompleted) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
+            RecorderAccessibilityService serviceInstance = RecorderAccessibilityService.getInstance();
+            if (serviceInstance != null) {
+                boolean success = serviceInstance.performGlobalAction(android.accessibilityservice.AccessibilityService.GLOBAL_ACTION_TAKE_SCREENSHOT);
+                if (success) {
+                    Log.i(TAG, "System screenshot triggered via accessibility service");
+                } else {
+                    Log.e(TAG, "Failed to trigger system screenshot via accessibility service");
+                }
+                if (onCompleted != null) onCompleted.run();
+            } else {
+                new android.os.Handler(android.os.Looper.getMainLooper()).post(() -> {
+                    android.widget.Toast.makeText(this, R.string.toast_accessibility_permission_screenshot, android.widget.Toast.LENGTH_LONG).show();
+                    try {
+                        Intent intent = new Intent(android.provider.Settings.ACTION_ACCESSIBILITY_SETTINGS);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        startActivity(intent);
+                    } catch (Exception e) {
+                        Log.e(TAG, "Could not launch accessibility settings", e);
+                    }
+                });
+                if (onCompleted != null) onCompleted.run();
+            }
+        } else {
+            if (recordingSession != null) {
+                recordingSession.takeScreenshot(onCompleted);
+            } else {
+                if (onCompleted != null) onCompleted.run();
+            }
+        }
+    }
+
+    public boolean isMicMuted() {
+        return recordingSession != null ? recordingSession.isMicMuted() : true;
+    }
+
+    public void setMicMuted(boolean muted) {
+        if (recordingSession != null) {
+            recordingSession.setMicMuted(muted);
+        }
+        if (floatingController != null) {
+            floatingController.updateMicState();
+        }
+    }
+
+    public void updateCameraState() {
+        if (floatingController != null) {
+            floatingController.updateCameraState();
+        }
+    }
+
+    public FloatingController getFloatingController() {
+        return floatingController;
+    }
+
+    public boolean isAudioSourceSystem() {
+        int source = new SettingsManager(this).getAudioSource();
+        return source == 2 || source == 3;
+    }
+
+    public void pauseRecording() {
+        if (recordingSession != null) {
+            recordingSession.pause();
+            updateNotificationPaused(true);
+            if (floatingController != null) {
+                floatingController.updatePauseState(true);
+            }
+        }
+    }
+
+    public void resumeRecording() {
+        if (recordingSession != null) {
+            recordingSession.resume();
+            updateNotificationPaused(false);
+            if (floatingController != null) {
+                floatingController.updatePauseState(false);
+            }
+        }
+    }
+
+    public void stopRecordingExternally() {
+        stopRecording();
+    }
+
+    private void updateNotificationPaused(boolean paused) {
+        NotificationManager manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        if (manager != null) {
+            Notification notification = createActiveNotification(paused);
+            manager.notify(NOTIFICATION_ID, notification);
+        }
+    }
+
+    private void showSavedNotification(String path, Uri uri) {
+        NotificationManager manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        
+        Intent openIntent = new Intent(Intent.ACTION_VIEW);
+        Bitmap thumbnail = null;
+
+        try {
+            if (uri != null) {
+                openIntent.setDataAndType(uri, "video/mp4");
+                openIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                    try {
+                        thumbnail = getContentResolver().loadThumbnail(uri, new android.util.Size(512, 384), null);
+                    } catch (Exception e) {
+                        // MediaStore might not have indexed it yet. Fallback to Retriever.
+                        android.media.MediaMetadataRetriever retriever = new android.media.MediaMetadataRetriever();
+                        try {
+                            retriever.setDataSource(this, uri);
+                            thumbnail = retriever.getFrameAtTime();
+                        } catch (Exception ignored) {
+                            Log.w(TAG, "Thumbnail generation skipped (video likely too short or empty).");
+                        } finally {
+                            try { retriever.release(); } catch (Exception ignored) {}
+                        }
+                    }
+                }
+            } else if (path != null) {
+                File file = new File(path);
+                Uri fileUri = FileProvider.getUriForFile(this, getPackageName() + ".provider", file);
+                openIntent.setDataAndType(fileUri, "video/mp4");
+                openIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                thumbnail = ThumbnailUtils.createVideoThumbnail(path, MediaStore.Video.Thumbnails.MINI_KIND);
+            }
+        } catch (Exception e) {
+            Log.w(TAG, "Failed to attach thumbnail to notification: " + e.getMessage());
+        }
+
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, openIntent, PendingIntent.FLAG_IMMUTABLE | PendingIntent.FLAG_UPDATE_CURRENT);
+        
+        Intent deleteIntent = new Intent(this, RecorderService.class);
+        deleteIntent.setAction(ACTION_DELETE);
+        if (uri != null) {
+            deleteIntent.putExtra("delete_uri", uri.toString());
+        }
+        if (path != null) {
+            deleteIntent.putExtra("delete_path", path);
+        }
+        PendingIntent deletePendingIntent = PendingIntent.getService(
+            this,
+            1,
+            deleteIntent,
+            PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_MUTABLE
+        );
+
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this, SAVED_CHANNEL_ID)
+            .setSmallIcon(R.drawable.ic_record)
+            .setContentTitle(getString(R.string.notification_saved_title))
+            .setContentText(getString(R.string.notification_saved_text))
+            .setPriority(NotificationCompat.PRIORITY_HIGH)
+            .setAutoCancel(true)
+            .setContentIntent(pendingIntent)
+            .addAction(0, getString(R.string.notification_action_delete), deletePendingIntent);
+
+        if (thumbnail != null) {
+            builder.setLargeIcon(thumbnail);
+            builder.setStyle(new NotificationCompat.BigPictureStyle()
+                .bigPicture(thumbnail)
+                .bigLargeIcon(null));
+        }
+
+        manager.notify(SAVED_NOTIFICATION_ID, builder.build());
+    }
+
+    private void deleteRecordingFile(String uriStr, String path) {
+        try {
+            if (uriStr != null) {
+                Uri uri = Uri.parse(uriStr);
+                getContentResolver().delete(uri, null, null);
+                Log.i(TAG, "Deleted recording via MediaStore Uri: " + uri);
+            } else if (path != null) {
+                File file = new File(path);
+                if (file.exists()) {
+                    file.delete();
+                    Log.i(TAG, "Deleted recording file: " + path);
+                }
+            }
+            new android.os.Handler(android.os.Looper.getMainLooper()).post(() -> {
+                android.widget.Toast.makeText(getApplicationContext(), R.string.toast_recording_deleted, android.widget.Toast.LENGTH_SHORT).show();
+            });
+        } catch (Exception e) {
+            Log.e(TAG, "Failed to delete recording file", e);
+        }
+    }
+
+    private void createNotificationChannels() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationManager manager = getSystemService(NotificationManager.class);
+            
+            NotificationChannel serviceChannel = new NotificationChannel(CHANNEL_ID, getString(R.string.channel_recorder_service), NotificationManager.IMPORTANCE_DEFAULT);
+            manager.createNotificationChannel(serviceChannel);
+            
+            NotificationChannel savedChannel = new NotificationChannel(SAVED_CHANNEL_ID, getString(R.string.channel_recording_saved), NotificationManager.IMPORTANCE_HIGH);
+            manager.createNotificationChannel(savedChannel);
+        }
+    }
+
+    private Notification createNotification() {
+        return createActiveNotification(false);
+    }
+
+    private Notification createActiveNotification(boolean paused) {
+        Intent stopIntent = new Intent(this, RecorderService.class);
+        stopIntent.setAction(ACTION_STOP);
+        PendingIntent stopPendingIntent = PendingIntent.getService(
+            this, 
+            0, 
+            stopIntent, 
+            PendingIntent.FLAG_IMMUTABLE | PendingIntent.FLAG_UPDATE_CURRENT
+        );
+
+        Intent pauseIntent = new Intent(this, RecorderService.class);
+        pauseIntent.setAction(paused ? ACTION_RESUME : ACTION_PAUSE);
+        PendingIntent pausePendingIntent = PendingIntent.getService(
+            this, 
+            0, 
+            pauseIntent, 
+            PendingIntent.FLAG_IMMUTABLE | PendingIntent.FLAG_UPDATE_CURRENT
+        );
+
+        String title = paused ? getString(R.string.notification_paused_title) : getString(R.string.notification_active_title);
+        String actionLabel = paused ? getString(R.string.notification_action_resume) : getString(R.string.notification_action_pause);
+
+        android.graphics.drawable.Icon pauseIcon = getOrCreateTextIcon(paused ? "RESUME" : "PAUSE");
+        android.graphics.drawable.Icon stopIcon = getOrCreateTextIcon("STOP");
+
+        Notification.Builder builder = new Notification.Builder(this, CHANNEL_ID)
+            .setContentTitle(title)
+            .setSmallIcon(R.drawable.ic_record)
+            .setOngoing(true)
+            .addAction(new Notification.Action.Builder(
+                pauseIcon, actionLabel, pausePendingIntent
+            ).build())
+            .addAction(new Notification.Action.Builder(
+                stopIcon, getString(R.string.stop_recording), stopPendingIntent
+            ).build());
+
+        SettingsManager settings = new SettingsManager(this);
+        boolean enabledInSettings = settings.isFloatingControlEnabled();
+
+        Intent bubbleIntent = new Intent(this, RecorderService.class);
+        bubbleIntent.setAction(ACTION_TOGGLE_BUBBLE);
+        PendingIntent bubblePendingIntent = PendingIntent.getService(
+            this, 
+            1, 
+            bubbleIntent, 
+            PendingIntent.FLAG_IMMUTABLE | PendingIntent.FLAG_UPDATE_CURRENT
+        );
+
+        String bubbleLabel;
+        String iconText;
+
+        if (enabledInSettings) {
+            bubbleLabel = isBubbleHidden ? getString(R.string.notification_action_show) : getString(R.string.notification_action_hide);
+            iconText = isBubbleHidden ? "SHOW" : "HIDE";
+        } else {
+            boolean isCurrentlyActive = (floatingController != null && !isBubbleHidden);
+            bubbleLabel = isCurrentlyActive ? getString(R.string.notification_action_off) : getString(R.string.notification_action_bubble);
+            iconText = isCurrentlyActive ? "OFF" : "BUBBLE";
+        }
+
+        android.graphics.drawable.Icon bubbleIcon = getOrCreateTextIcon(iconText);
+
+        builder.addAction(new Notification.Action.Builder(
+            bubbleIcon, bubbleLabel, bubblePendingIntent
+        ).build());
+        builder.setStyle(new Notification.MediaStyle()
+            .setShowActionsInCompactView(0, 1, 2));
+
+        return builder.build();
+    }
+
+    private android.graphics.drawable.Icon cachedPauseIcon;
+    private android.graphics.drawable.Icon cachedResumeIcon;
+    private android.graphics.drawable.Icon cachedStopIcon;
+    private android.graphics.drawable.Icon cachedShowIcon;
+    private android.graphics.drawable.Icon cachedHideIcon;
+    private android.graphics.drawable.Icon cachedBubbleIcon;
+    private android.graphics.drawable.Icon cachedOffIcon;
+
+    private android.graphics.drawable.Icon getOrCreateTextIcon(String text) {
+        switch (text) {
+            case "PAUSE":
+                if (cachedPauseIcon == null) cachedPauseIcon = createTextIcon("PAUSE");
+                return cachedPauseIcon;
+            case "RESUME":
+                if (cachedResumeIcon == null) cachedResumeIcon = createTextIcon("RESUME");
+                return cachedResumeIcon;
+            case "STOP":
+                if (cachedStopIcon == null) cachedStopIcon = createTextIcon("STOP");
+                return cachedStopIcon;
+            case "SHOW":
+                if (cachedShowIcon == null) cachedShowIcon = createTextIcon("SHOW");
+                return cachedShowIcon;
+            case "HIDE":
+                if (cachedHideIcon == null) cachedHideIcon = createTextIcon("HIDE");
+                return cachedHideIcon;
+            case "BUBBLE":
+                if (cachedBubbleIcon == null) cachedBubbleIcon = createTextIcon("BUBBLE");
+                return cachedBubbleIcon;
+            case "OFF":
+                if (cachedOffIcon == null) cachedOffIcon = createTextIcon("OFF");
+                return cachedOffIcon;
+            default:
+                return createTextIcon(text);
+        }
+    }
+
+    private android.graphics.drawable.Icon createTextIcon(String text) {
+        float density = getResources().getDisplayMetrics().density;
+        int sizePx = Math.max(144, (int) (36 * density));
+        Bitmap bitmap = Bitmap.createBitmap(sizePx, sizePx, Bitmap.Config.ARGB_8888);
+        android.graphics.Canvas canvas = new android.graphics.Canvas(bitmap);
+        
+        android.graphics.Paint paint = new android.graphics.Paint(android.graphics.Paint.ANTI_ALIAS_FLAG);
+        paint.setColor(android.graphics.Color.WHITE);
+        paint.setTypeface(android.graphics.Typeface.create(android.graphics.Typeface.SANS_SERIF, android.graphics.Typeface.BOLD));
+        paint.setTextAlign(android.graphics.Paint.Align.CENTER);
+        
+        // Dynamically scale text size so words like RESUME/PAUSE fit with 25% padding on both sides
+        float maxTextWidth = sizePx * 0.50f;
+        float textSize = sizePx * 0.16f;
+        paint.setTextSize(textSize);
+        while (paint.measureText(text) > maxTextWidth && textSize > 4f) {
+            textSize -= 0.5f;
+            paint.setTextSize(textSize);
+        }
+        
+        android.graphics.Paint.FontMetrics fontMetrics = paint.getFontMetrics();
+        float fontHeight = fontMetrics.descent - fontMetrics.ascent;
+        float y = (sizePx - fontHeight) / 2f - fontMetrics.ascent;
+        
+        canvas.drawText(text, sizePx / 2f, y, paint);
+        
+        return android.graphics.drawable.Icon.createWithBitmap(bitmap);
+    }
+
+    @Override
+    public void onDestroy() {
+        activeInstance = null;
+        if (floatingController != null) {
+            floatingController.dismiss();
+            floatingController = null;
+        }
+        if (CameraOverlayController.isOverlayShowing()) {
+            CameraOverlayController.getInstance(this).dismiss();
+        }
+        if (recordingSession != null) {
+            recordingSession.stop();
+            recordingSession = null;
+        }
+        if (isRecording) {
+            isRecording = false;
+            notifyStateChanged();
+        }
+        releaseWakeLock();
+        super.onDestroy();
+    }
+
+    @Override
+    public void onTaskRemoved(Intent rootIntent) {
+        super.onTaskRemoved(rootIntent);
+        Log.d(TAG, "onTaskRemoved: Task removed from Recents.");
+        if (isRecording) {
+            isTaskRemovedFromRecents = true;
+            Log.i(TAG, "onTaskRemoved: App swiped from Recents while recording.");
+        } else {
+            Log.i(TAG, "onTaskRemoved: Not recording, stopping service.");
+            stopForeground(true);
+            stopSelf();
+        }
+    }
+
+    @Nullable
+    @Override
+    public IBinder onBind(Intent intent) { return null; }
+}

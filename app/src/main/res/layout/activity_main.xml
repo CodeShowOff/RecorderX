@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_main"
+        app:backgroundTint="@color/bg_main"
+        app:elevation="0dp"
+        app:liftOnScroll="false"
+        app:liftOnScrollColor="@color/bg_main"
+        app:statusBarForeground="@android:color/transparent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginTop="16dp"
+            android:clipChildren="false">
+
+            <LinearLayout
+                android:id="@+id/titleContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/btnOpenRecordings"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constrainedWidth="true"
+                android:gravity="center_vertical"
+                android:clipChildren="false">
+
+                <TextView
+                    android:id="@+id/titleMain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:fontFamily="sans-serif-black"
+                    android:textColor="@color/accent_lavender"
+                    android:textSize="18sp"
+                    android:letterSpacing="0.1" />
+
+                <TextView
+                    android:id="@+id/titleX"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="X"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="sans-serif-black"
+                    android:textColor="@color/accent_lavender"
+                    android:textSize="18sp"
+                    android:letterSpacing="0.1"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/swipeHintIcon"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/ic_swipe_arrows"
+                    app:tint="@color/accent_lavender"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/subtitleMain"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/saved_in_path"
+                android:textColor="@color/text_secondary"
+                android:textSize="10sp"
+                android:fontFamily="monospace"
+                android:ellipsize="end"
+                android:maxLines="1"
+                app:layout_constraintStart_toStartOf="@id/titleContainer"
+                app:layout_constraintTop_toBottomOf="@id/titleContainer"
+                app:layout_constraintEnd_toStartOf="@id/btnOpenRecordings"
+                android:layout_marginEnd="8dp"/>
+
+            <View
+                android:id="@+id/colorTouchArea"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/btnOpenRecordings"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <TextView
+                android:id="@+id/btnThemeToggle"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/theme_box_bg"
+                android:gravity="center"
+                android:text="D"
+                android:textColor="@color/bg_main"
+                android:textSize="10sp"
+                android:fontFamily="sans-serif-black"
+                android:translationY="-6dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGuide"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="62dp"
+                app:layout_constraintWidth_max="62dp"
+                app:layout_constrainedWidth="true"
+                android:text="@string/btn_guide"
+                android:textColor="@color/text_secondary"
+                android:textSize="10sp"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:maxLines="2"
+                android:ellipsize="end"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMinTextSize="5sp"
+                app:autoSizeMaxTextSize="10sp"
+                app:autoSizeStepGranularity="0.5sp"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="5sp"
+                android:autoSizeMaxTextSize="10sp"
+                android:autoSizeStepGranularity="0.5sp"
+                android:insetLeft="0dp"
+                android:insetRight="0dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:layout_marginEnd="6dp"
+                android:translationY="-6dp"
+                app:rippleColor="@android:color/transparent"
+                app:layout_constraintEnd_toStartOf="@id/btnThemeToggle"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnOpenRecordings"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="80dp"
+                app:layout_constraintWidth_max="80dp"
+                app:layout_constrainedWidth="true"
+                android:text="@string/btn_open_recordings"
+                android:textColor="@color/text_secondary"
+                android:textSize="10sp"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:maxLines="2"
+                android:ellipsize="end"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMinTextSize="5sp"
+                app:autoSizeMaxTextSize="10sp"
+                app:autoSizeStepGranularity="0.5sp"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="5sp"
+                android:autoSizeMaxTextSize="10sp"
+                android:autoSizeStepGranularity="0.5sp"
+                android:insetLeft="0dp"
+                android:insetRight="0dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:layout_marginEnd="6dp"
+                android:translationY="-6dp"
+                app:rippleColor="@android:color/transparent"
+                app:layout_constraintEnd_toStartOf="@id/btnGuide"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:clipToPadding="false"
+        android:paddingBottom="140dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnLanguage"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:text="@string/btn_language"
+                    android:textColor="@color/text_primary"
+                    android:textSize="10sp"
+                    android:fontFamily="sans-serif-black"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="0dp"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:minWidth="0dp"
+                    android:layout_marginEnd="18dp"
+                    app:strokeColor="@color/accent_lavender"
+                    app:strokeWidth="1dp"
+                    app:cornerRadius="6dp" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchFloatingControl"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/floating_controls_label"
+                    android:textColor="@color/text_primary"
+                    android:textSize="10.5sp"
+                    android:textStyle="bold"
+                    app:thumbTint="@color/text_primary"
+                    app:trackTint="@color/accent_lavender" />
+            </LinearLayout>
+
+            <TextView android:id="@+id/headerVideoSubsystem" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/header_video_subsystem" android:fontFamily="sans-serif-black" android:textSize="11sp" android:textColor="@color/accent_lavender" android:letterSpacing="0.2" android:layout_marginBottom="24dp"/>
+
+            <!-- Video Codec -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/video_codec_label" android:textSize="12sp" android:textColor="@color/text_primary" android:textStyle="bold" android:layout_marginBottom="8dp"/>
+            <com.google.android.material.slider.Slider android:id="@+id/codecSlider" android:layout_width="match_parent" android:layout_height="wrap_content" android:valueFrom="0" android:valueTo="2" android:stepSize="1" app:trackHeight="32dp" app:thumbRadius="10dp" app:thumbColor="@color/text_primary" app:trackColorActive="@color/accent_lavender" app:trackColorInactive="@color/slider_track_inactive" android:layout_marginBottom="4dp"/>
+            <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingHorizontal="16dp" android:layout_marginBottom="32dp">
+                <TextView android:id="@+id/c1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="H.264" android:textColor="@color/text_primary" android:textSize="9sp" android:fontFamily="sans-serif-black"/>
+                <TextView android:id="@+id/c2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="H.265" android:textColor="@color/text_primary" android:textSize="9sp" android:fontFamily="sans-serif-black"/>
+                <TextView android:id="@+id/c3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="AV1" android:textColor="@color/text_primary" android:textSize="9sp" android:fontFamily="sans-serif-black"/>
+                <androidx.constraintlayout.helper.widget.Flow android:layout_width="match_parent" android:layout_height="wrap_content" app:constraint_referenced_ids="c1,c2,c3" app:flow_horizontalStyle="spread_inside" app:layout_constraintTop_toTopOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Orientation -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/orientation_label" android:textSize="12sp" android:textColor="@color/text_primary" android:textStyle="bold" android:layout_marginBottom="8dp"/>
+            <com.google.android.material.slider.Slider android:id="@+id/orientationSlider" android:layout_width="match_parent" android:layout_height="wrap_content" android:valueFrom="0" android:valueTo="2" android:stepSize="1" app:trackHeight="32dp" app:thumbRadius="10dp" app:thumbColor="@color/text_primary" app:trackColorActive="@color/accent_lavender" app:trackColorInactive="@color/slider_track_inactive" android:layout_marginBottom="4dp"/>
+            <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingHorizontal="16dp" android:layout_marginBottom="32dp">
+                <TextView android:id="@+id/o1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="AUTO" android:textColor="@color/text_primary" android:textSize="9sp" android:fontFamily="sans-serif-black"/>
+                <TextView android:id="@+id/o2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PORT" android:textColor="@color/text_primary" android:textSize="9sp" android:fontFamily="sans-serif-black"/>
+                <TextView android:id="@+id/o3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="LAND" android:textColor="@color/text_primary" android:textSize="9sp" android:fontFamily="sans-serif-black"/>
+                <androidx.constraintlayout.helper.widget.Flow android:layout_width="match_parent" android:layout_height="wrap_content" app:constraint_referenced_ids="o1,o2,o3" app:flow_horizontalStyle="spread_inside" app:layout_constraintTop_toTopOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Resolution -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/resolution_label" android:textSize="12sp" android:textColor="@color/text_primary" android:textStyle="bold" android:layout_marginBottom="8dp"/>
+            <com.google.android.material.slider.Slider android:id="@+id/resolutionSlider" android:layout_width="match_parent" android:layout_height="wrap_content" android:valueFrom="0" android:valueTo="5" android:stepSize="1" app:trackHeight="32dp" app:thumbRadius="10dp" app:thumbColor="@color/text_primary" app:trackColorActive="@color/accent_lavender" app:trackColorInactive="@color/slider_track_inactive" android:layout_marginBottom="4dp"/>
+            <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingHorizontal="16dp" android:layout_marginBottom="32dp">
+                <TextView android:id="@+id/r1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="NATIVE" android:textColor="@color/text_primary" android:textSize="9sp" android:fontFamily="sans-serif-black"/>
+                <TextView android:id="@+id/r2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="4K" android:textColor="@color/text_primary" android:textSize="9sp" android:fontFamily="sans-serif-black"/>
+                <TextView android:id="@+id/r3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2K" android:textColor="@color/text_primary" android:textSize="9sp" android:fontFamily="sans-serif-black"/>
+                <TextView android:id="@+id/r4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="FHD" android:textColor="@color/text_primary" android:textSize="9sp" android:fontFamily="sans-serif-black"/>
+                <TextView android:id="@+id/r5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="HD" android:textColor="@color/text_primary" android:textSize="9sp" android:fontFamily="sans-serif-black"/>
+                <TextView android:id="@+id/r6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="480" android:textColor="@color/text_primary" android:textSize="9sp" android:fontFamily="sans-serif-black"/>
+                <androidx.constraintlayout.helper.widget.Flow android:layout_width="match_parent" android:layout_height="wrap_content" app:constraint_referenced_ids="r1,r2,r3,r4,r5,r6" app:flow_horizontalStyle="spread_inside" app:layout_constraintTop_toTopOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- FPS -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/fps_label" android:textSize="12sp" android:textColor="@color/text_primary" android:textStyle="bold" android:layout_marginBottom="8dp"/>
+            <com.google.android.material.slider.Slider android:id="@+id/fpsSlider" android:layout_width="match_parent" android:layout_height="wrap_content" android:valueFrom="0" android:valueTo="4" android:stepSize="1" app:trackHeight="32dp" app:thumbRadius="10dp" app:thumbColor="@color/text_primary" app:trackColorActive="@color/accent_lavender" app:trackColorInactive="@color/slider_track_inactive" android:layout_marginBottom="4dp"/>
+            <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingHorizontal="16dp" android:layout_marginBottom="32dp">
+                <TextView android:id="@+id/f1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="24" android:textColor="@color/text_primary" android:textSize="9sp" android:fontFamily="sans-serif-black"/>
+                <TextView android:id="@+id/f2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="30" android:textColor="@color/text_primary" android:textSize="9sp" android:fontFamily="sans-serif-black"/>
+                <TextView android:id="@+id/f3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="60" android:textColor="@color/text_primary" android:textSize="9sp" android:fontFamily="sans-serif-black"/>
+                <TextView android:id="@+id/f4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="90" android:textColor="@color/text_primary" android:textSize="9sp" android:fontFamily="sans-serif-black"/>
+                <TextView android:id="@+id/f5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="120" android:textColor="@color/text_primary" android:textSize="9sp" android:fontFamily="sans-serif-black"/>
+                <androidx.constraintlayout.helper.widget.Flow android:layout_width="match_parent" android:layout_height="wrap_content" app:constraint_referenced_ids="f1,f2,f3,f4,f5" app:flow_horizontalStyle="spread_inside" app:layout_constraintTop_toTopOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Bitrate -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bitrate_label" android:textSize="12sp" android:textColor="@color/text_primary" android:textStyle="bold" android:layout_marginBottom="8dp"/>
+            <com.google.android.material.slider.Slider android:id="@+id/bitrateSlider" android:layout_width="match_parent" android:layout_height="wrap_content" android:valueFrom="0" android:valueTo="5" android:stepSize="1" app:trackHeight="32dp" app:thumbRadius="10dp" app:thumbColor="@color/text_primary" app:trackColorActive="@color/accent_lavender" app:trackColorInactive="@color/slider_track_inactive" android:layout_marginBottom="4dp"/>
+            <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingHorizontal="16dp" android:layout_marginBottom="32dp">
+                <TextView android:id="@+id/b1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2M" android:textColor="@color/text_primary" android:textSize="9sp" android:fontFamily="sans-serif-black"/>
+                <TextView android:id="@+id/b2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="4M" android:textColor="@color/text_primary" android:textSize="9sp" android:fontFamily="sans-serif-black"/>
+                <TextView android:id="@+id/b3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="8M" android:textColor="@color/text_primary" android:textSize="9sp" android:fontFamily="sans-serif-black"/>
+                <TextView android:id="@+id/b4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="12M" android:textColor="@color/text_primary" android:textSize="9sp" android:fontFamily="sans-serif-black"/>
+                <TextView android:id="@+id/b5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="16M" android:textColor="@color/text_primary" android:textSize="9sp" android:fontFamily="sans-serif-black"/>
+                <TextView android:id="@+id/b6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="18M" android:textColor="@color/text_primary" android:textSize="9sp" android:fontFamily="sans-serif-black"/>
+                <androidx.constraintlayout.helper.widget.Flow android:layout_width="match_parent" android:layout_height="wrap_content" app:constraint_referenced_ids="b1,b2,b3,b4,b5,b6" app:flow_horizontalStyle="spread_inside" app:layout_constraintTop_toTopOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Bitrate Mode -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bitrate_mode_label" android:textSize="12sp" android:textColor="@color/text_primary" android:textStyle="bold" android:layout_marginBottom="8dp"/>
+            <com.google.android.material.slider.Slider android:id="@+id/bitrateModeSlider" android:layout_width="match_parent" android:layout_height="wrap_content" android:valueFrom="0" android:valueTo="1" android:stepSize="1" app:trackHeight="32dp" app:thumbRadius="10dp" app:thumbColor="@color/text_primary" app:trackColorActive="@color/accent_lavender" app:trackColorInactive="@color/slider_track_inactive" android:layout_marginBottom="4dp"/>
+            <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingHorizontal="16dp" android:layout_marginBottom="48dp">
+                <TextView android:id="@+id/m1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="VBR" android:textColor="@color/text_primary" android:textSize="9sp" android:fontFamily="sans-serif-black"/>
+                <TextView android:id="@+id/m2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="CBR" android:textColor="@color/text_primary" android:textSize="9sp" android:fontFamily="sans-serif-black"/>
+                <androidx.constraintlayout.helper.widget.Flow android:layout_width="match_parent" android:layout_height="wrap_content" app:constraint_referenced_ids="m1,m2" app:flow_horizontalStyle="spread_inside" app:layout_constraintTop_toTopOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView android:id="@+id/headerAudioSubsystem" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/header_audio_subsystem" android:fontFamily="sans-serif-black" android:textSize="11sp" android:textColor="@color/accent_lavender" android:letterSpacing="0.2" android:layout_marginBottom="24dp"/>
+
+            <!-- Audio Source -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/audio_source_label" android:textSize="12sp" android:textColor="@color/text_primary" android:textStyle="bold" android:layout_marginBottom="8dp"/>
+            <com.google.android.material.slider.Slider android:id="@+id/audioSlider" android:layout_width="match_parent" android:layout_height="wrap_content" android:valueFrom="0" android:valueTo="3" android:stepSize="1" app:trackHeight="32dp" app:thumbRadius="10dp" app:thumbColor="@color/text_primary" app:trackColorActive="@color/accent_lavender" app:trackColorInactive="@color/slider_track_inactive" android:layout_marginBottom="4dp"/>
+            <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingHorizontal="16dp" android:layout_marginBottom="32dp">
+                <TextView android:id="@+id/a1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="OFF" android:textColor="@color/text_primary" android:textSize="9sp" android:fontFamily="sans-serif-black"/>
+                <TextView android:id="@+id/a2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="MIC" android:textColor="@color/text_primary" android:textSize="9sp" android:fontFamily="sans-serif-black"/>
+                <TextView android:id="@+id/a3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SYS" android:textColor="@color/text_primary" android:textSize="9sp" android:fontFamily="sans-serif-black"/>
+                <TextView android:id="@+id/a4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SYS+MIC" android:textColor="@color/text_primary" android:textSize="9sp" android:fontFamily="sans-serif-black"/>
+                <androidx.constraintlayout.helper.widget.Flow android:layout_width="match_parent" android:layout_height="wrap_content" app:constraint_referenced_ids="a1,a2,a3,a4" app:flow_horizontalStyle="spread_inside" app:layout_constraintTop_toTopOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Audio Quality -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/audio_quality_label" android:textSize="12sp" android:textColor="@color/text_primary" android:textStyle="bold" android:layout_marginBottom="8dp"/>
+            <com.google.android.material.slider.Slider android:id="@+id/audioQualitySlider" android:layout_width="match_parent" android:layout_height="wrap_content" android:valueFrom="0" android:valueTo="2" android:stepSize="1" app:trackHeight="32dp" app:thumbRadius="10dp" app:thumbColor="@color/text_primary" app:trackColorActive="@color/accent_lavender" app:trackColorInactive="@color/slider_track_inactive" android:layout_marginBottom="4dp"/>
+            <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingHorizontal="16dp" android:layout_marginBottom="48dp">
+                <TextView android:id="@+id/q1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="LOW" android:textColor="@color/text_primary" android:textSize="9sp" android:fontFamily="sans-serif-black"/>
+                <TextView android:id="@+id/q2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="MID" android:textColor="@color/text_primary" android:textSize="9sp" android:fontFamily="sans-serif-black"/>
+                <TextView android:id="@+id/q3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="MAX" android:textColor="@color/text_primary" android:textSize="9sp" android:fontFamily="sans-serif-black"/>
+                <androidx.constraintlayout.helper.widget.Flow android:layout_width="match_parent" android:layout_height="wrap_content" app:constraint_referenced_ids="q1,q2,q3" app:flow_horizontalStyle="spread_inside" app:layout_constraintTop_toTopOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Custom Naming -->
+
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/namingTemplateLayout" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColorHint="@color/text_secondary" app:boxStrokeWidth="2dp" app:boxStrokeWidthFocused="2dp" android:hint="@string/naming_template_label">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/namingTemplateEditText" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="text" android:fontFamily="monospace" android:textSize="12sp" android:textColor="@color/text_primary" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvNamingTemplateHelper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="24dp"
+                android:text="@string/naming_template_helper"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_gravity="bottom" android:background="@color/bg_main" android:padding="24dp">
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnRecord" android:layout_width="match_parent" android:layout_height="64dp" android:text="@string/start_recording" android:textColor="@color/black" android:textSize="15sp" android:fontFamily="sans-serif-black" android:letterSpacing="0.1" app:backgroundTint="@color/accent_lavender" app:cornerRadius="4dp" android:elevation="0dp" />
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

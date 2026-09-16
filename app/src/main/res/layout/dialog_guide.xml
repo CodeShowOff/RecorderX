@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="12dp"
+    app:strokeWidth="0dp"
+    app:cardBackgroundColor="@color/bg_main">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Header Section -->
+        <TextView
+            android:id="@+id/dialogTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/guide_title"
+            android:fontFamily="sans-serif-black"
+            android:textColor="@color/accent_lavender"
+            android:textSize="18sp"
+            android:letterSpacing="0.1"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Scrollable content -->
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_marginBottom="20dp"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- CODEC -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/video_codec_label"
+                        android:fontFamily="sans-serif-black"
+                        android:textColor="@color/accent_lavender"
+                        android:textSize="11sp"
+                        android:letterSpacing="0.05"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/guide_codec_desc"
+                        android:textColor="@color/text_primary"
+                        android:textSize="13sp"
+                        android:fontFamily="sans-serif"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+
+                <!-- ORIENTATION -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/orientation_label"
+                        android:fontFamily="sans-serif-black"
+                        android:textColor="@color/accent_lavender"
+                        android:textSize="11sp"
+                        android:letterSpacing="0.05"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/guide_orientation_desc"
+                        android:textColor="@color/text_primary"
+                        android:textSize="13sp"
+                        android:fontFamily="sans-serif"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+
+                <!-- RESOLUTION -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/resolution_label"
+                        android:fontFamily="sans-serif-black"
+                        android:textColor="@color/accent_lavender"
+                        android:textSize="11sp"
+                        android:letterSpacing="0.05"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/guide_resolution_desc"
+                        android:textColor="@color/text_primary"
+                        android:textSize="13sp"
+                        android:fontFamily="sans-serif"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+
+                <!-- FRAME RATE -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fps_label"
+                        android:fontFamily="sans-serif-black"
+                        android:textColor="@color/accent_lavender"
+                        android:textSize="11sp"
+                        android:letterSpacing="0.05"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/guide_fps_desc"
+                        android:textColor="@color/text_primary"
+                        android:textSize="13sp"
+                        android:fontFamily="sans-serif"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+
+                <!-- BITRATE -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bitrate_label"
+                        android:fontFamily="sans-serif-black"
+                        android:textColor="@color/accent_lavender"
+                        android:textSize="11sp"
+                        android:letterSpacing="0.05"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/guide_bitrate_desc"
+                        android:textColor="@color/text_primary"
+                        android:textSize="13sp"
+                        android:fontFamily="sans-serif"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+
+                <!-- BITRATE MODE -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bitrate_mode_label"
+                        android:fontFamily="sans-serif-black"
+                        android:textColor="@color/accent_lavender"
+                        android:textSize="11sp"
+                        android:letterSpacing="0.05"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/guide_bitrate_mode_desc"
+                        android:textColor="@color/text_primary"
+                        android:textSize="13sp"
+                        android:fontFamily="sans-serif"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+
+                <!-- AUDIO SOURCE -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/audio_source_label"
+                        android:fontFamily="sans-serif-black"
+                        android:textColor="@color/accent_lavender"
+                        android:textSize="11sp"
+                        android:letterSpacing="0.05"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/guide_audio_source_desc"
+                        android:textColor="@color/text_primary"
+                        android:textSize="13sp"
+                        android:fontFamily="sans-serif"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+
+                <!-- AUDIO QUALITY -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/audio_quality_label"
+                        android:fontFamily="sans-serif-black"
+                        android:textColor="@color/accent_lavender"
+                        android:textSize="11sp"
+                        android:letterSpacing="0.05"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/guide_audio_quality_desc"
+                        android:textColor="@color/text_primary"
+                        android:textSize="13sp"
+                        android:fontFamily="sans-serif"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <!-- Dismiss Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnUnderstood"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="@string/guide_understood"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:fontFamily="sans-serif-black"
+            android:letterSpacing="0.05"
+            app:backgroundTint="@color/accent_lavender"
+            app:cornerRadius="4dp"
+            android:elevation="0dp" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
