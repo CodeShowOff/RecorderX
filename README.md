@@ -61,7 +61,14 @@
 3. Target: Minimum SDK 29 (Android 10), Target SDK 34 (Android 14).
 4. Execution: Run `./gradlew assembleRelease` for optimized production binaries.
 
+## Installation
 
+**ADB Install (For Developers)**
+If you have ADB set up on your PC and your phone connected with USB Debugging enabled, you can completely bypass the Play Protect dialog by installing it via command line. This is the preferred way of installing local builds:
+
+```bash
+adb install -r -d app/build/outputs/apk/release/app-release.apk
+```
 
 
 ---
