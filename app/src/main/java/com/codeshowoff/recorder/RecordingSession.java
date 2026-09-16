@@ -73,6 +73,7 @@ public class RecordingSession {
     private long totalPauseDurationMs = 0;
     
     private final AtomicBoolean isMicMuted = new AtomicBoolean(true);
+    private final java.util.concurrent.ExecutorService micToggleExecutor = java.util.concurrent.Executors.newSingleThreadExecutor();
 
     private String outputFilePath;
     private Uri outputUri;
@@ -769,6 +770,10 @@ public class RecordingSession {
             
             // 1. Stop components without killing MediaProjection directly
             isRecording.set(false);
+            try { 
+                if (videoThread != null) { videoThread.interrupt(); videoThread.join(1000); }
+                if (audioThread != null) { audioThread.interrupt(); audioThread.join(1000); }
+            } catch (Exception ignored) {}
             try { if (virtualDisplay != null) { virtualDisplay.release(); virtualDisplay = null; } } catch (Exception ignored) {}
             try { if (videoEncoder != null) { videoEncoder.stop(); videoEncoder.release(); videoEncoder = null; } } catch (Exception ignored) {}
             try { if (audioEncoder != null) { audioEncoder.stop(); audioEncoder.release(); audioEncoder = null; } } catch (Exception ignored) {}
@@ -955,7 +960,7 @@ public class RecordingSession {
         
         // Dynamically start/stop mic input to control system indicator
         if (settings.getAudioSource() == 2 || settings.getAudioSource() == 3) {
-            new Thread(() -> {
+            micToggleExecutor.execute(() -> {
                 synchronized (audioRecordLock) {
                     if (muted) {
                         if (audioRecordSecondary != null) {
@@ -992,7 +997,7 @@ public class RecordingSession {
                         }
                     }
                 }
-            }, "MicToggleThread").start();
+            });
         }
     }
 }

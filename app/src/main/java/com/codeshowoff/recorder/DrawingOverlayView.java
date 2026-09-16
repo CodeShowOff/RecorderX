@@ -313,6 +313,11 @@ public class DrawingOverlayView extends View {
                 drawnItems.add(arrow);
                 break;
         }
+
+        // Prevent OutOfMemory on long sessions
+        if (drawnItems.size() > 200) {
+            drawnItems.remove(0);
+        }
     }
 
     public interface DrawnItem {

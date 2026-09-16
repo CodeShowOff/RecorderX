@@ -33,7 +33,7 @@ public class WidgetActionActivity extends Activity {
         }
 
         finish();
-        if (Build.VERSION.SDK_INT >= 34) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
             overrideActivityTransition(OVERRIDE_TRANSITION_CLOSE, 0, 0);
         } else {
             overridePendingTransition(0, 0);
