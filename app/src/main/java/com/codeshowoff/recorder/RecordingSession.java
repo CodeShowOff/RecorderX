@@ -738,6 +738,8 @@ public class RecordingSession {
         try { if (pfd != null) { pfd.close(); pfd = null; } } catch (Exception ignored) {}
 
         try { mediaProjection.stop(); } catch (Exception ignored) {}
+        
+        try { micToggleExecutor.shutdownNow(); } catch (Exception ignored) {}
 
         // Finalize MediaStore or notify Scanner
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
@@ -960,44 +962,48 @@ public class RecordingSession {
         
         // Dynamically start/stop mic input to control system indicator
         if (settings.getAudioSource() == 2 || settings.getAudioSource() == 3) {
-            micToggleExecutor.execute(() -> {
-                synchronized (audioRecordLock) {
-                    if (muted) {
-                        if (audioRecordSecondary != null) {
-                            Log.i(TAG, "Muting mic: releasing secondary AudioRecord");
-                            try {
-                                audioRecordSecondary.stop();
-                            } catch (Exception ignored) {}
-                            try {
-                                audioRecordSecondary.release();
-                            } catch (Exception ignored) {}
-                            audioRecordSecondary = null;
-                        }
-                    } else {
-                        if (audioRecordSecondary == null) {
-                            Log.i(TAG, "Unmuting mic: initializing secondary AudioRecord");
-                            try {
-                                int sampleRate = audioRecord != null ? audioRecord.getSampleRate() : 44100;
-                                int channelConfig = android.media.AudioFormat.CHANNEL_IN_STEREO;
-                                int audioFormat = android.media.AudioFormat.ENCODING_PCM_16BIT;
-                                int bufferSize = AudioRecord.getMinBufferSize(sampleRate, channelConfig, audioFormat) * 4;
-                                
-                                audioRecordSecondary = new AudioRecord(android.media.MediaRecorder.AudioSource.MIC, sampleRate, channelConfig, audioFormat, bufferSize);
-                                if (audioRecordSecondary.getState() == AudioRecord.STATE_INITIALIZED) {
-                                    audioRecordSecondary.startRecording();
-                                } else {
-                                    Log.e(TAG, "Failed to initialize secondary AudioRecord during unmute");
+            try {
+                micToggleExecutor.execute(() -> {
+                    synchronized (audioRecordLock) {
+                        if (muted) {
+                            if (audioRecordSecondary != null) {
+                                Log.i(TAG, "Muting mic: releasing secondary AudioRecord");
+                                try {
+                                    audioRecordSecondary.stop();
+                                } catch (Exception ignored) {}
+                                try {
                                     audioRecordSecondary.release();
+                                } catch (Exception ignored) {}
+                                audioRecordSecondary = null;
+                            }
+                        } else {
+                            if (audioRecordSecondary == null) {
+                                Log.i(TAG, "Unmuting mic: initializing secondary AudioRecord");
+                                try {
+                                    int sampleRate = audioRecord != null ? audioRecord.getSampleRate() : 44100;
+                                    int channelConfig = android.media.AudioFormat.CHANNEL_IN_STEREO;
+                                    int audioFormat = android.media.AudioFormat.ENCODING_PCM_16BIT;
+                                    int bufferSize = AudioRecord.getMinBufferSize(sampleRate, channelConfig, audioFormat) * 4;
+                                    
+                                    audioRecordSecondary = new AudioRecord(android.media.MediaRecorder.AudioSource.MIC, sampleRate, channelConfig, audioFormat, bufferSize);
+                                    if (audioRecordSecondary.getState() == AudioRecord.STATE_INITIALIZED) {
+                                        audioRecordSecondary.startRecording();
+                                    } else {
+                                        Log.e(TAG, "Failed to initialize secondary AudioRecord during unmute");
+                                        audioRecordSecondary.release();
+                                        audioRecordSecondary = null;
+                                    }
+                                } catch (Exception e) {
+                                    Log.e(TAG, "Error starting secondary AudioRecord", e);
                                     audioRecordSecondary = null;
                                 }
-                            } catch (Exception e) {
-                                Log.e(TAG, "Error starting secondary AudioRecord", e);
-                                audioRecordSecondary = null;
                             }
                         }
                     }
-                }
-            });
+                });
+            } catch (java.util.concurrent.RejectedExecutionException e) {
+                Log.w(TAG, "Mic toggle ignored: session is stopping or stopped.");
+            }
         }
     }
 }

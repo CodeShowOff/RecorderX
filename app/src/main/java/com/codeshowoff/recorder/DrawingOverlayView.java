@@ -316,7 +316,10 @@ public class DrawingOverlayView extends View {
 
         // Prevent OutOfMemory on long sessions
         if (drawnItems.size() > 200) {
-            drawnItems.remove(0);
+            DrawnItem removed = drawnItems.remove(0);
+            if (selectedItem == removed) {
+                selectedItem = null;
+            }
         }
     }
 
