@@ -4,8 +4,8 @@
   <img src=".github/assets/iconz.png" width="256" height="256" />
   <br>
 
-  <a href="https://github.com/CodeShowOff/RecorderX/raw/main/releases/RecorderX-v3.1.1.apk">
-    <img src="https://img.shields.io/badge/Download_APK-v3.1.1-3FA9F5?style=for-the-badge&logo=android&logoColor=white" alt="Download APK" />
+  <a href="https://github.com/CodeShowOff/RecorderX/raw/main/releases/RecorderX-v1.0.0.apk">
+    <img src="https://img.shields.io/badge/Download_APK-v1.0.0-3FA9F5?style=for-the-badge&logo=android&logoColor=white" alt="Download APK" />
   </a>
   <br><br>
 
