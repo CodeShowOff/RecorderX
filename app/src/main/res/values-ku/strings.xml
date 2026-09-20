@@ -163,13 +163,13 @@
     <string name="toast_camera_on">Pêveka Kamerayê: ON</string>
     <string name="toast_camera_off">Pêveka Kamerayê: OFF</string>
     <string name="toast_camera_armed">Kamera: ON (Bi tomarkirinê re dest pê dike)</string>
-    <string name="whats_new_title">ÇI NÛ YE</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">Kameraya Rûyê Zêde Bû</string>
-    <string name="whats_new_facecam_desc">Ji bo mîhengên kamerayê (guhertina pêş/paş, mezinkirin/biçûkkirin, şiklê xelek/çargoşe) 2 çirkeyan li ser îkona kamerayê ya di bûqikê de bigirin.</string>
-    <string name="whats_new_widgets_title">2 Widget Hatine Zêdekirin</string>
-    <string name="whats_new_widgets_desc">Widgetên 1×1 Tomara Bilez û 1×2 Navenda Kontrolê bi guherkerên deng, kamera û arasteyê yên zindî hatine zêdekirin.</string>
-    <string name="whats_new_fixes_title">Sererastkirina Çewtiyên Piçûk</string>
-    <string name="whats_new_fixes_desc">Diyalogê girtina ekranê ya veqetandî, rewşa kamerayê ya zindî ya hevdengkirî û baştirkirina arambûnê.</string>
-    <string name="whats_new_btn">FÊM KIR</string>
+
+
+
+
+
+
+
+
+
 </resources>

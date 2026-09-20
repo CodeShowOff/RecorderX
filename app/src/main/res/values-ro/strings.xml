@@ -163,13 +163,13 @@
     <string name="toast_camera_on">Suprapunere cameră: ACTIVATĂ</string>
     <string name="toast_camera_off">Suprapunere cameră: DEZACTIVATĂ</string>
     <string name="toast_camera_armed">Cameră: PORNITĂ (Începe cu înregistrarea)</string>
-    <string name="whats_new_title">CE ESTE NOU</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">Face Cam adăugată</string>
-    <string name="whats_new_facecam_desc">Țineți apăsat 2 sec pe pictograma camerei din bulă pentru setări (comutare față/spate, redimensionare, formă cerc/dreptunghi).</string>
-    <string name="whats_new_widgets_title">2 widget-uri adăugate</string>
-    <string name="whats_new_widgets_desc">Au fost adăugate widget-urile 1×1 Înregistrare rapidă și 1×2 Centru de control cu comutatoare live pentru audio, cameră și orientare.</string>
-    <string name="whats_new_fixes_title">Remedieri minore de erori</string>
-    <string name="whats_new_fixes_desc">Caseta de dialog pentru captură ecran izolată, starea camerei live sincronizată și îmbunătățiri ale stabilității.</string>
-    <string name="whats_new_btn">AM ÎNȚELES</string>
+
+
+
+
+
+
+
+
+
 </resources>

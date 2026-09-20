@@ -163,13 +163,13 @@
     <string name="toast_camera_on">ক্যামেরা ওভারলে: চালু</string>
     <string name="toast_camera_off">ক্যামেরা ওভারলে: বন্ধ</string>
     <string name="toast_camera_armed">ক্যামেরা: চালু (রেকর্ডিংয়ের সাথে শুরু হবে)</string>
-    <string name="whats_new_title">নতুন কী আছে</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">ফেস ক্যাম যুক্ত হয়েছে</string>
-    <string name="whats_new_facecam_desc">ক্যামেরা সেটিংসের জন্য বাবলের ক্যামেরা আইকনে ২ সেকেন্ড ধরে রাখুন (সামনে/পেছনে পরিবর্তন, আকার পরিবর্তন, বৃত্ত/আয়তাকার আকার)।</string>
-    <string name="whats_new_widgets_title">২টি উইজেট যুক্ত হয়েছে</string>
-    <string name="whats_new_widgets_desc">লাইভ অডিও, ক্যামেরা এবং ওরিয়েন্টেশন টগলসহ ১×১ দ্রুত রেকর্ড ও ১×২ কন্ট্রোল সেন্টার উইজেট যুক্ত করা হয়েছে।</string>
-    <string name="whats_new_fixes_title">ক্ষুদ্র ত্রুটি সংশোধন</string>
-    <string name="whats_new_fixes_desc">আইসোলেটেড স্ক্রিন ক্যাপচার ডায়ালগ, সিঙ্ক্রোনাইজড লাইভ ক্যামেরা স্ট্যাটাস এবং স্থিতিশীলতা বৃদ্ধি।</string>
-    <string name="whats_new_btn">বুঝেছি</string>
+
+
+
+
+
+
+
+
+
 </resources>

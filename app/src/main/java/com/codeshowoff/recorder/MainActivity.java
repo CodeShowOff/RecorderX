@@ -162,10 +162,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        android.widget.TextView titleX = findViewById(R.id.titleX);
-        if (titleX != null) {
-            titleX.setVisibility(android.view.View.VISIBLE);
-        }
     }
 
     private void initUI() {
@@ -407,7 +403,7 @@ public class MainActivity extends AppCompatActivity {
                     btnBg.setColor(getActiveAccentColor());
                     btnBg.setCornerRadius(4 * getResources().getDisplayMetrics().density);
                     btnOk.setBackground(btnBg);
-                    btnOk.setTextColor(android.graphics.Color.BLACK);
+                    btnOk.setTextColor(getResources().getColor(R.color.bg_main, getTheme()));
                     btnOk.setTypeface(android.graphics.Typeface.DEFAULT_BOLD);
                     // Single clean listener — plain Dialog has no internal handler, one tap = one call
                     btnOk.setOnClickListener(v -> {
@@ -829,7 +825,7 @@ public class MainActivity extends AppCompatActivity {
         btnBg.setColor(getActiveAccentColor());
         btnBg.setCornerRadius(4 * getResources().getDisplayMetrics().density);
         btnOk.setBackground(btnBg);
-        btnOk.setTextColor(android.graphics.Color.BLACK);
+        btnOk.setTextColor(getResources().getColor(R.color.bg_main, getTheme()));
         btnOk.setTypeface(android.graphics.Typeface.DEFAULT_BOLD);
         btnOk.setOnClickListener(v -> {
             isWarningDialogShowing = false;
@@ -1006,8 +1002,8 @@ public class MainActivity extends AppCompatActivity {
     private void checkAndShowWhatsNew() {
         android.content.SharedPreferences prefs = getSharedPreferences("app_version_prefs", MODE_PRIVATE);
         String lastSeen = prefs.getString("last_seen_whats_new", "");
-        if (!"3.1.1".equals(lastSeen)) {
-            prefs.edit().putString("last_seen_whats_new", "3.1.1").apply();
+        if (!"1.0.0".equals(lastSeen)) {
+            prefs.edit().putString("last_seen_whats_new", "1.0.0").apply();
             android.view.View root = findViewById(android.R.id.content);
             if (root != null) {
                 root.post(this::showWhatsNewDialog);

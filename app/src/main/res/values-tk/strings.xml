@@ -163,13 +163,13 @@
     <string name="toast_camera_on">Kamera örtügi: AÇYK</string>
     <string name="toast_camera_off">Kamera örtügi: ÖÇÜK</string>
     <string name="toast_camera_armed">Kamera: AÇYK (Ýazgy bilen başlaýar)</string>
-    <string name="whats_new_title">TÄZELIKLER</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">Ýüz kamerasy goşuldy</string>
-    <string name="whats_new_facecam_desc">Kamera sazlamalary üçin köbükdäki kamera belgisini 2 sek basyp tutuň (öň/yzky çalyşmak, ölçegini üýtgetmek, tegelek/gönüburçlyk şekili).</string>
-    <string name="whats_new_widgets_title">2 sany widžet goşuldy</string>
-    <string name="whats_new_widgets_desc">Göni audio, kamera we ugur açyp-öçürijileri bolan 1×1 Çalt ýazgy we 1×2 Dolandyryş merkezi widžetleri goşuldy.</string>
-    <string name="whats_new_fixes_title">Ownuk näsazlyklary düzeltmek</string>
-    <string name="whats_new_fixes_desc">Aýratynlanan ekran suraty dialogy, sinhronlanan göni kamera ýagdaýy we durnuklylyk gowulandyrmalary.</string>
-    <string name="whats_new_btn">DÜŞÜNDIM</string>
+
+
+
+
+
+
+
+
+
 </resources>

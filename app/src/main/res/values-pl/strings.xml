@@ -163,13 +163,13 @@
     <string name="toast_camera_on">Nakładka kamery: WŁ.</string>
     <string name="toast_camera_off">Nakładka kamery: WYŁ.</string>
     <string name="toast_camera_armed">Kamera: WŁ. (Uruchamia się wraz z nagrywaniem)</string>
-    <string name="whats_new_title">CO NOWEGO</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">Dodano Face Cam</string>
-    <string name="whats_new_facecam_desc">Przytrzymaj ikonę kamery w bąblu przez 2 s, aby otworzyć ustawienia (przełączanie przód/tył, rozmiar, kształt koło/prostokąt).</string>
-    <string name="whats_new_widgets_title">Dodano 2 widżety</string>
-    <string name="whats_new_widgets_desc">Dodano widżety 1×1 Szybkie nagrywanie i 1×2 Centrum sterowania z przełącznikami dźwięku, kamery i orientacji.</string>
-    <string name="whats_new_fixes_title">Drobne poprawki błędów</string>
-    <string name="whats_new_fixes_desc">Odizolowane okno dialogowe przechwytywania ekranu, zsynchronizowany stan kamery na żywo i ulepszenia stabilności.</string>
-    <string name="whats_new_btn">ROZUMIEM</string>
+
+
+
+
+
+
+
+
+
 </resources>

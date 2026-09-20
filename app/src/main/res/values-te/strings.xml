@@ -163,13 +163,13 @@
     <string name="toast_camera_on">కెమెరా ఓవర్లే: ఆన్</string>
     <string name="toast_camera_off">కెమెరా ఓవర్లే: ఆఫ్</string>
     <string name="toast_camera_armed">కెమెరా: ఆన్ (రికార్డింగ్‌తో ప్రారంభమవుతుంది)</string>
-    <string name="whats_new_title">కొత్త విశేషాలు</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">ఫేస్ కామ్ జోడించబడింది</string>
-    <string name="whats_new_facecam_desc">కెమెరా సెట్టింగ్‌ల కోసం బబుల్‌లోని కెమెరా చిహ్నాన్ని 2 సెకన్లు నొక్కి పట్టుకోండి (ముందు/వెనుక మార్చడం, పరిమాణం మార్చడం, వృత్తం/దీర్ఘచతురస్రం ఆకారం).</string>
-    <string name="whats_new_widgets_title">2 విడ్జెట్‌లు జోడించబడ్డాయి</string>
-    <string name="whats_new_widgets_desc">లైవ్ ఆడియో, కెమెరా మరియు ఓరియంటేషన్ టోగుల్స్‌తో 1×1 త్వరిత రికార్డ్ &amp; 1×2 కంట్రోల్ సెంటర్ విడ్జెట్‌లు జోడించబడ్డాయి.</string>
-    <string name="whats_new_fixes_title">చిన్న బగ్ పరిష్కారాలు</string>
-    <string name="whats_new_fixes_desc">ప్రత్యేక స్క్రీన్ క్యాప్చర్ డైలాగ్, సమకాలీకరించబడిన లైవ్ కెమెరా స్థితి మరియు స్థిరత్వ మెరుగుదలలు.</string>
-    <string name="whats_new_btn">అర్థమైంది</string>
+
+
+
+
+
+
+
+
+
 </resources>

@@ -163,13 +163,13 @@
     <string name="toast_camera_on">Dusha Kaamerada: DAARAN</string>
     <string name="toast_camera_off">Dusha Kaamerada: DAMISAN</string>
     <string name="toast_camera_armed">Kamarada: DAARAN (Waxay ku bilaabmaysaa duubista)</string>
-    <string name="whats_new_title">WAXA CUSUB</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">Waxaa Lagu Daray Kaamerada Wajiga</string>
-    <string name="whats_new_facecam_desc">Ku hay 2 ilbiriqsi astaanta kamarada ee xumbada si aad u hesho habaynta kamarada (u kala beddel hore/dambe, cabbirka beddel, qaab goobaabin/leydi).</string>
-    <string name="whats_new_widgets_title">Waxaa Lagu Daray 2 Widget</string>
-    <string name="whats_new_widgets_desc">Waxaa lagu daray 1×1 Duubis Degdeg ah &amp; 1×2 Xarunta Xakamaynta widgets leh beddelayaasha tooska ah ee codka, kamarada, iyo jihada.</string>
-    <string name="whats_new_fixes_title">Hagaajinta Ciladaha Yaryar</string>
-    <string name="whats_new_fixes_desc">Wada-hadalka duubista shaashadda oo la go\'doomiyay, xaaladda kamarada tooska ah oo la waafajiyay, iyo hagaajinta xasilloonida.</string>
-    <string name="whats_new_btn">WAAN FAHMAY</string>
+
+
+
+
+
+
+
+
+
 </resources>

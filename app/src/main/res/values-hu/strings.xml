@@ -163,13 +163,13 @@
     <string name="toast_camera_on">Kamerafedvény: BE</string>
     <string name="toast_camera_off">Kamerafedvény: KI</string>
     <string name="toast_camera_armed">Kamera: BE (A felvétellel együtt indul)</string>
-    <string name="whats_new_title">ÚJDONSÁGOK</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">Face Cam hozzáadva</string>
-    <string name="whats_new_facecam_desc">Tartsa lenyomva 2 mp-ig a kamera ikont a buborékban a beállításokhoz (első/hátsó váltás, átméretezés, kör/téglalap alak).</string>
-    <string name="whats_new_widgets_title">2 widget hozzáadva</string>
-    <string name="whats_new_widgets_desc">1×1 Gyors rögzítés és 1×2 Vezérlőközpont widgetek hozzáadva élő hang-, kamera- és tájoláskapcsolókkal.</string>
-    <string name="whats_new_fixes_title">Kisebb hibajavítások</string>
-    <string name="whats_new_fixes_desc">Elkülönített képernyőrögzítési párbeszédpanel, szinkronizált élő kameraállapot és stabilitási fejlesztések.</string>
-    <string name="whats_new_btn">ÉRTEM</string>
+
+
+
+
+
+
+
+
+
 </resources>

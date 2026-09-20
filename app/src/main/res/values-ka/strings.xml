@@ -163,13 +163,13 @@
     <string name="toast_camera_on">კამერის გადაფარვა: ჩართულია</string>
     <string name="toast_camera_off">კამერის გადაფარვა: გამორთულია</string>
     <string name="toast_camera_armed">კამერა: ჩართულია (იწყება ჩაწერასთან ერთად)</string>
-    <string name="whats_new_title">რა არის ახალი</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">დაემატა სახის კამერა</string>
-    <string name="whats_new_facecam_desc">კამერის პარამეტრებისთვის გეჭიროთ 2 წამი ბუშტში კამერის ხატულაზე (წინა/უკანა გადართვა, ზომის შეცვლა, წრე/მართკუთხედი ფორმა).</string>
-    <string name="whats_new_widgets_title">დაემატა 2 ვიჯეტი</string>
-    <string name="whats_new_widgets_desc">დაემატა 1×1 სწრაფი ჩაწერა და 1×2 მართვის ცენტრი ვიჯეტები ცოცხალი აუდიოს, კამერის და ორიენტაციის გადამრთველებით.</string>
-    <string name="whats_new_fixes_title">მცირე ხარვეზების გასწორება</string>
-    <string name="whats_new_fixes_desc">იზოლირებული ეკრანის გადაღების დიალოგი, სინქრონიზებული პირდაპირი კამერის სტატუსი და სტაბილურობის გაუმჯობესებები.</string>
-    <string name="whats_new_btn">გასაგებია</string>
+
+
+
+
+
+
+
+
+
 </resources>

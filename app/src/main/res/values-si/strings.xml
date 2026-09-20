@@ -163,13 +163,13 @@
     <string name="toast_camera_on">කැමරා ආවරණය: ක්‍රියාත්මකයි</string>
     <string name="toast_camera_off">කැමරා ආවරණය: අක්‍රියයි</string>
     <string name="toast_camera_armed">කැමරාව: ක්‍රියාත්මකයි (පටිගත කිරීම සමඟ ආරම්භ වේ)</string>
-    <string name="whats_new_title">අලුත් මොනවාද</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">ෆේස් කැමරාව එක් කරන ලදී</string>
-    <string name="whats_new_facecam_desc">කැමරා සැකසුම් සඳහා බුබුලේ ඇති කැමරා අයිකනය තත්පර 2ක් ඔබාගෙන සිටින්න (ඉදිරිපස/පසුපස මාරු කිරීම, ප්‍රමාණය වෙනස් කිරීම, වෘත්ත/සෘජුකෝණාස්‍ර හැඩය).</string>
-    <string name="whats_new_widgets_title">විජට් 2ක් එක් කරන ලදී</string>
-    <string name="whats_new_widgets_desc">සජීවී ශ්‍රව්‍ය, කැමරා සහ දිශානති ටොගල සහිත 1×1 ඉක්මන් පටිගත කිරීම සහ 1×2 පාලන මධ්‍යස්ථාන විජට් එක් කරන ලදී.</string>
-    <string name="whats_new_fixes_title">සුළු දෝෂ නිවැරදි කිරීම්</string>
-    <string name="whats_new_fixes_desc">හුදකලා තිර ග්‍රහණ සංවාද කවුළුව, සමමුහුර්ත කළ සජීවී කැමරා තත්ත්වය සහ ස්ථාවරත්ව වැඩිදියුණු කිරීම්.</string>
-    <string name="whats_new_btn">තේරුණා</string>
+
+
+
+
+
+
+
+
+
 </resources>

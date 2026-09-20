@@ -163,13 +163,13 @@
     <string name="toast_camera_on">Kaamera ülekate: SEES</string>
     <string name="toast_camera_off">Kaamera ülekate: VÄLJAS</string>
     <string name="toast_camera_armed">Kaamera: SEES (Käivitub salvestamisega)</string>
-    <string name="whats_new_title">MIS ON UUT</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">Lisatud näokaamera</string>
-    <string name="whats_new_facecam_desc">Hoidke 2 sekundit mulli kaameraikoonil kaamera seadete avamiseks (esi-/tagakaamera vahetamine, suuruse muutmine, ringi/ristküliku kuju).</string>
-    <string name="whats_new_widgets_title">Lisatud 2 vidinat</string>
-    <string name="whats_new_widgets_desc">Lisatud 1×1 Kiirsalvestuse ja 1×2 Juhtimiskeskuse vidinad reaalajas heli, kaamera ja suuna lülititega.</string>
-    <string name="whats_new_fixes_title">Väiksemad veaparandused</string>
-    <string name="whats_new_fixes_desc">Isoleeritud ekraanihõive dialoog, sünkroonitud reaalajas kaamera olek ja stabiilsuse täiustused.</string>
-    <string name="whats_new_btn">SAIN ARU</string>
+
+
+
+
+
+
+
+
+
 </resources>

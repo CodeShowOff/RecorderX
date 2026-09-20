@@ -163,13 +163,13 @@
     <string name="toast_camera_on">Mbulimi i Kamerës: AKTIV</string>
     <string name="toast_camera_off">Mbulimi i Kamerës: JOAKTIV</string>
     <string name="toast_camera_armed">Kamera: AKTIVE (Fillon me regjistrimin)</string>
-    <string name="whats_new_title">ÇFARË KA TË RE</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">U shtua Face Cam</string>
-    <string name="whats_new_facecam_desc">Mbani shtypur për 2 sekonda ikonën e kamerës në flluskë për cilësimet e kamerës (ndërrimi përpara/mbrapa, ndryshimi i madhësisë, forma rrethore/drejtkëndëshe).</string>
-    <string name="whats_new_widgets_title">U shtuan 2 miniaplikacione</string>
-    <string name="whats_new_widgets_desc">U shtuan miniaplikacionet 1×1 Regjistrim i Shpejtë dhe 1×2 Qendra e Kontrollit me ndërrues të audios, kamerës dhe orientimit.</string>
-    <string name="whats_new_fixes_title">Rregullime të Vogla Gabimesh</string>
-    <string name="whats_new_fixes_desc">Dialogu i izoluar i regjistrimit të ekranit, statusi i sinkronizuar i kamerës dhe përmirësime të qëndrueshmërisë.</string>
-    <string name="whats_new_btn">E KUPTOVA</string>
+
+
+
+
+
+
+
+
+
 </resources>

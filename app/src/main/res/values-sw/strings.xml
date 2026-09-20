@@ -163,13 +163,13 @@
     <string name="toast_camera_on">Uwekeleaji wa Kamera: UMEWASHWA</string>
     <string name="toast_camera_off">Uwekeleaji wa Kamera: UMEZIMWA</string>
     <string name="toast_camera_armed">Kamera: IMEWASHWA (Huanza na kurekodi)</string>
-    <string name="whats_new_title">YALIYO MAPYA</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">Kamera ya Uso Imeongezwa</string>
-    <string name="whats_new_facecam_desc">Shikilia kwa sekunde 2 kwenye ikoni ya kamera kwenye kiputo kwa mipangilio ya kamera (badilisha mbele/nyuma, badilisha ukubwa, umbo la duara/mstatili).</string>
-    <string name="whats_new_widgets_title">Wijeti 2 Zimeongezwa</string>
-    <string name="whats_new_widgets_desc">Imeongeza wijeti za 1×1 Rekodi ya Haraka &amp; 1×2 Kituo cha Kudhibiti zenye vibadilishi vya sauti ya moja kwa moja, kamera, na mwelekeo.</string>
-    <string name="whats_new_fixes_title">Marekebisho Madogo ya Hitilafu</string>
-    <string name="whats_new_fixes_desc">Kisanduku cha kunasa skrini kilichotengwa, hali ya kamera ya moja kwa moja iliyosawazishwa, na maboresho ya uthabiti.</string>
-    <string name="whats_new_btn">NIMEELEWA</string>
+
+
+
+
+
+
+
+
+
 </resources>

@@ -163,13 +163,13 @@
     <string name="toast_camera_on">Накладення камери: УВІМК</string>
     <string name="toast_camera_off">Накладення камери: ВИМК</string>
     <string name="toast_camera_armed">Камера: УВІМК (Запуск разом із записом)</string>
-    <string name="whats_new_title">ЩО НОВОГО</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">Додано Face Cam</string>
-    <string name="whats_new_facecam_desc">Утримуйте 2 с піктограму камери в бульбашці для налаштувань (перемикання передня/задня, зміна розміру, коло/прямокутник).</string>
-    <string name="whats_new_widgets_title">Додано 2 віджети</string>
-    <string name="whats_new_widgets_desc">Додано віджети 1×1 «Швидкий запис» та 1×2 «Центр керування» з перемикачами звуку, камери та орієнтації.</string>
-    <string name="whats_new_fixes_title">Незначні виправлення помилок</string>
-    <string name="whats_new_fixes_desc">Ізольовано діалог захоплення екрана, синхронізовано статус камери в реальному часі, підвищено стабільність.</string>
-    <string name="whats_new_btn">ЗРОЗУМІЛО</string>
+
+
+
+
+
+
+
+
+
 </resources>

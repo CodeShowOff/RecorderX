@@ -163,13 +163,13 @@
     <string name="toast_camera_on">Kamera Qatı: AÇIQ</string>
     <string name="toast_camera_off">Kamera Qatı: BAĞLI</string>
     <string name="toast_camera_armed">Kamera: AÇIQ (Yazılma ilə başlayır)</string>
-    <string name="whats_new_title">YENİLİKLƏR</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">Üz Kamerası Əlavə Edildi</string>
-    <string name="whats_new_facecam_desc">Kamera parametrləri üçün baloncukdakı kamera ikonunu 2 saniyə basıb saxlayın (ön/arxa keçid, ölçü dəyişdirmə, dairə/düzbucaqlı forma).</string>
-    <string name="whats_new_widgets_title">2 Vidcet Əlavə Edildi</string>
-    <string name="whats_new_widgets_desc">Canlı audio, kamera və səmt keçidləri ilə 1×1 Sürətli Yazılma və 1×2 İdarəetmə Mərkəzi vidcetləri əlavə edildi.</string>
-    <string name="whats_new_fixes_title">Kiçik Xəta Düzəlişləri</string>
-    <string name="whats_new_fixes_desc">Təcrid olunmuş ekran çəkmə pəncərəsi, sinxronlaşdırılmış canlı kamera statusu və sabitlik təkmilləşdirmələri.</string>
-    <string name="whats_new_btn">BAŞA DÜŞDÜM</string>
+
+
+
+
+
+
+
+
+
 </resources>

@@ -163,13 +163,13 @@
     <string name="toast_camera_on">ਕੈਮਰਾ ਓਵਰਲੇ: ਚਾਲੂ</string>
     <string name="toast_camera_off">ਕੈਮਰਾ ਓਵਰਲੇ: ਬੰਦ</string>
     <string name="toast_camera_armed">ਕੈਮਰਾ: ਚਾਲੂ (ਰਿਕਾਰਡਿੰਗ ਨਾਲ ਸ਼ੁਰੂ ਹੁੰਦਾ ਹੈ)</string>
-    <string name="whats_new_title">ਨਵਾਂ ਕੀ ਹੈ</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">ਫੇਸ ਕੈਮ ਜੋੜਿਆ ਗਿਆ</string>
-    <string name="whats_new_facecam_desc">ਕੈਮਰਾ ਸੈਟਿੰਗਾਂ ਲਈ ਬੁਲਬੁਲੇ ਵਿੱਚ ਕੈਮਰਾ ਆਈਕਨ ਨੂੰ 2 ਸਕਿੰਟ ਦਬਾ ਕੇ ਰੱਖੋ (ਅੱਗੇ/ਪਿੱਛੇ ਬਦਲੋ, ਆਕਾਰ ਬਦਲੋ, ਗੋਲ/ਆਇਤਕਾਰ ਆਕਾਰ)।</string>
-    <string name="whats_new_widgets_title">2 ਵਿਜੇਟ ਜੋੜੇ ਗਏ</string>
-    <string name="whats_new_widgets_desc">ਲਾਈਵ ਆਡੀਓ, ਕੈਮਰਾ ਅਤੇ ਦਿਸ਼ਾ ਟੌਗਲਸ ਦੇ ਨਾਲ 1×1 ਤੁਰੰਤ ਰਿਕਾਰਡ ਅਤੇ 1×2 ਕੰਟਰੋਲ ਕੇਂਦਰ ਵਿਜੇਟਸ ਜੋੜੇ ਗਏ।</string>
-    <string name="whats_new_fixes_title">ਛੋਟੀਆਂ ਗਲਤੀਆਂ ਦਾ ਸੁਧਾਰ</string>
-    <string name="whats_new_fixes_desc">ਵੱਖਰਾ ਸਕ੍ਰੀਨ ਕੈਪਚਰ ਡਾਇਲਾਗ, ਸਮਕਾਲੀ ਲਾਈਵ ਕੈਮਰਾ ਸਥਿਤੀ ਅਤੇ ਸਥਿਰਤਾ ਸੁਧਾਰ।</string>
-    <string name="whats_new_btn">ਸਮਝ ਗਿਆ</string>
+
+
+
+
+
+
+
+
+
 </resources>

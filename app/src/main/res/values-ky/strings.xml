@@ -163,13 +163,13 @@
     <string name="toast_camera_on">Камера катмары: КҮЙҮК</string>
     <string name="toast_camera_off">Камера катмары: ӨЧҮК</string>
     <string name="toast_camera_armed">Камера: КҮЙҮК (Жазуу менен бирге башталат)</string>
-    <string name="whats_new_title">ЖАҢЫЛЫКТАР</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">Face Cam кошулду</string>
-    <string name="whats_new_facecam_desc">Камера жөндөөлөрү үчүн көбүктөгү камера сүрөтчөсүн 2 секунд басып туруңуз (алдыңкы/арткы алмаштыруу, өлчөмүн өзгөртүү, тегерек/төрт бурчтук форма).</string>
-    <string name="whats_new_widgets_title">2 виджет кошулду</string>
-    <string name="whats_new_widgets_desc">Үн, камера жана багытты түз которгучтары бар 1×1 Тез жазуу &amp; 1×2 Башкаруу борбору виджеттери кошулду.</string>
-    <string name="whats_new_fixes_title">Майда мүчүлүштүктөр оңдолду</string>
-    <string name="whats_new_fixes_desc">Экранды жаздыруу диалогу бөлүндү, жандуу камера абалы синхрондоштурулду жана туруктуулук жакшыртылды.</string>
-    <string name="whats_new_btn">ТҮШҮНДҮМ</string>
+
+
+
+
+
+
+
+
+
 </resources>

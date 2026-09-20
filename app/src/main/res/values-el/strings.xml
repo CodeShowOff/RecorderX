@@ -166,13 +166,13 @@
     <string name="toast_camera_on">Επικάλυψη κάμερας: ΕΝΕΡΓΗ</string>
     <string name="toast_camera_off">Επικάλυψη κάμερας: ΑΝΕΝΕΡΓΗ</string>
     <string name="toast_camera_armed">Κάμερα: ΕΝΕΡΓΗ (Ξεκινά με την εγγραφή)</string>
-    <string name="whats_new_title">ΤΙ ΝΕΟ ΥΠΑΡΧΕΙ</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">Προστέθηκε Face Cam</string>
-    <string name="whats_new_facecam_desc">Κρατήστε πατημένο για 2 δευτ. το εικονίδιο κάμερας στη φούσκα για ρυθμίσεις (εναλλαγή εμπρός/πίσω, αλλαγή μεγέθους, σχήμα κύκλου/ορθογωνίου).</string>
-    <string name="whats_new_widgets_title">Προστέθηκαν 2 Widget</string>
-    <string name="whats_new_widgets_desc">Προστέθηκαν widget 1×1 Γρήγορη εγγραφή και 1×2 Κέντρο ελέγχου με άμεσους διακόπτες ήχου, κάμερας και προσανατολισμού.</string>
-    <string name="whats_new_fixes_title">Μικρές διορθώσεις σφαλμάτων</string>
-    <string name="whats_new_fixes_desc">Απομονωμένο παράθυρο διαλόγου καταγραφής οθόνης, συγχρονισμένη κατάσταση ζωντανής κάμερας και βελτιώσεις σταθερότητας.</string>
-    <string name="whats_new_btn">ΚΑΤΑΛΑΒΑ</string>
+
+
+
+
+
+
+
+
+
 </resources>

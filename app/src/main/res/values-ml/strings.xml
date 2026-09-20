@@ -163,13 +163,13 @@
     <string name="toast_camera_on">ക്യാമറ ഓവർലേ: ഓൺ</string>
     <string name="toast_camera_off">ക്യാമറ ഓവർലേ: ഓഫ്</string>
     <string name="toast_camera_armed">ക്യാമറ: ഓൺ (റെക്കോർഡിംഗിനൊപ്പം ആരംഭിക്കുന്നു)</string>
-    <string name="whats_new_title">പുതിയതെന്താണ്</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">ഫേസ് കാം ചേർത്തു</string>
-    <string name="whats_new_facecam_desc">ക്യാമറ ക്രമീകരണങ്ങൾക്കായി ബബിളിലെ ക്യാമറ ഐക്കണിൽ 2 സെക്കൻഡ് അമർത്തിപ്പിടിക്കുക (മുൻഭാഗം/പിൻഭാഗം മാറ്റുക, വലുപ്പം മാറ്റുക, വൃത്തം/ചതുരം ആകൃതി).</string>
-    <string name="whats_new_widgets_title">2 വിജറ്റുകൾ ചേർത്തു</string>
-    <string name="whats_new_widgets_desc">തത്സമയ ഓഡിയോ, ക്യാമറ, ഓറിയന്റേഷൻ ടോഗിളുകൾ എന്നിവയോടുകൂടിയ 1×1 ദ്രുത റെക്കോർഡ് &amp; 1×2 കൺട്രോൾ സെന്റർ വിജറ്റുകൾ ചേർത്തു.</string>
-    <string name="whats_new_fixes_title">ചെറിയ ബഗ് പരിഹാരങ്ങൾ</string>
-    <string name="whats_new_fixes_desc">പ്രത്യേകം സ്‌ക്രീൻ ക്യാപ്‌ചർ ഡയലോഗ്, സമന്വയിപ്പിച്ച ലൈവ് ക്യാമറ നില, സ്ഥിരത മെച്ചപ്പെടുത്തലുകൾ.</string>
-    <string name="whats_new_btn">മനസ്സിലായി</string>
+
+
+
+
+
+
+
+
+
 </resources>

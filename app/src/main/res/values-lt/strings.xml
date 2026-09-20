@@ -163,13 +163,13 @@
     <string name="toast_camera_on">Kameros perdanga: ĮJUNGTA</string>
     <string name="toast_camera_off">Kameros perdanga: IŠJUNGTA</string>
     <string name="toast_camera_armed">Kamera: ĮJUNGTA (Prasideda su įrašu)</string>
-    <string name="whats_new_title">KAS NAUJO</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">Pridėta veido kamera</string>
-    <string name="whats_new_facecam_desc">Palaikykite 2 sek. kameros piktogramą burbule kameros nustatymams (keisti priekinę/galinę, keisti dydį, apskritimo/stačiakampio formą).</string>
-    <string name="whats_new_widgets_title">Pridėti 2 valdikliai</string>
-    <string name="whats_new_widgets_desc">Pridėti 1×1 „Greitas įrašymas“ ir 1×2 „Valdymo centras“ valdikliai su tiesioginiais garso, kameros ir orientacijos perjungikliais.</string>
-    <string name="whats_new_fixes_title">Nedideli klaidų pataisymai</string>
-    <string name="whats_new_fixes_desc">Izoliuotas ekrano fiksavimo dialogo langas, sinchronizuota tiesioginė kameros būsena ir stabilumo patobulinimai.</string>
-    <string name="whats_new_btn">SUPRATAU</string>
+
+
+
+
+
+
+
+
+
 </resources>

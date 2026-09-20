@@ -163,13 +163,13 @@
     <string name="toast_camera_on">கேமரா மேலடுக்கு: ஆன்</string>
     <string name="toast_camera_off">கேமரா மேலடுக்கு: ஆஃப்</string>
     <string name="toast_camera_armed">கேமரா: ஆன் (பதிவுடன் தொடங்கும்)</string>
-    <string name="whats_new_title">புதிய அம்சங்கள்</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">ஃபேஸ் கேம் சேர்க்கப்பட்டது</string>
-    <string name="whats_new_facecam_desc">கேமரா அமைப்புகளுக்கு குமிழியில் உள்ள கேமரா ஐகானை 2 வினாடிகள் அழுத்திப் பிடிக்கவும் (முன்/பின் மாற்றுதல், அளவு மாற்றுதல், வட்டம்/செவ்வகம் வடிவம்).</string>
-    <string name="whats_new_widgets_title">2 விட்ஜெட்டுகள் சேர்க்கப்பட்டன</string>
-    <string name="whats_new_widgets_desc">நேரலை ஆடியோ, கேமரா மற்றும் திரைத் திசை மாற்றங்களுடன் 1×1 விரைவுப் பதிவு மற்றும் 1×2 கட்டுப்பாட்டு மைய விட்ஜெட்டுகள் சேர்க்கப்பட்டன.</string>
-    <string name="whats_new_fixes_title">சிறிய பிழைத் திருத்தங்கள்</string>
-    <string name="whats_new_fixes_desc">தனித்த திரை பிடிப்பு உரையாடல், ஒத்திசைக்கப்பட்ட நேரலை கேமரா நிலை மற்றும் நிலைத்தன்மை மேம்பாடுகள்.</string>
-    <string name="whats_new_btn">சரி</string>
+
+
+
+
+
+
+
+
+
 </resources>

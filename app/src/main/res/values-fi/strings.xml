@@ -163,13 +163,13 @@
     <string name="toast_camera_on">Kameran peittokuva: PÄÄLLÄ</string>
     <string name="toast_camera_off">Kameran peittokuva: POIS</string>
     <string name="toast_camera_armed">Kamera: PÄÄLLÄ (Käynnistyy tallennuksen mukana)</string>
-    <string name="whats_new_title">MITÄ UUTTA</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">Face Cam lisätty</string>
-    <string name="whats_new_facecam_desc">Paina kuplan kamerakuvaketta 2 s avataksesi asetukset (vaihda etu/taka, muuta kokoa, ympyrä/suorakulmio).</string>
-    <string name="whats_new_widgets_title">2 widgetiä lisätty</string>
-    <string name="whats_new_widgets_desc">Lisätty 1×1 Pikatallennus ja 1×2 Ohjauskeskus -widgetit äänen, kameran ja suuntauksen pikakytkimillä.</string>
-    <string name="whats_new_fixes_title">Pieniä virheiden korjauksia</string>
-    <string name="whats_new_fixes_desc">Eristetty näytönkaappausikkuna, synkronoitu live-kameran tila ja parannettu vakautta.</string>
-    <string name="whats_new_btn">SELVÄ</string>
+
+
+
+
+
+
+
+
+
 </resources>

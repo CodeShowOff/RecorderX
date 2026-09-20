@@ -163,13 +163,13 @@
     <string name="toast_camera_on">ກ້ອງຊ້ອນທັບ: ເປີດ</string>
     <string name="toast_camera_off">ກ້ອງຊ້ອນທັບ: ປິດ</string>
     <string name="toast_camera_armed">ກ້ອງ: ເປີດ (ເລີ່ມພ້ອມກັບການບັນທຶກ)</string>
-    <string name="whats_new_title">ມີຫຍັງໃໝ່</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">ເພີ່ມ Face Cam</string>
-    <string name="whats_new_facecam_desc">ກົດໄອຄອນກ້ອງໃນຟອງຄ້າງໄວ້ 2 ວິນາທີສຳລັບການຕັ້ງຄ່າກ້ອງ (ສະຫຼັບໜ້າ/ຫຼັງ, ປັບຂະໜາດ, ຮູບວົງມົນ/ສີ່ຫຼ່ຽມ).</string>
-    <string name="whats_new_widgets_title">ເພີ່ມ 2 ວິດເຈັດ</string>
-    <string name="whats_new_widgets_desc">ເພີ່ມວິດເຈັດບັນທຶກດ່ວນ 1×1 &amp; ສູນຄວບຄຸມ 1×2 ພ້ອມປຸ່ມສະຫຼັບສຽງ, ກ້ອງ ແລະ ທິດທາງໜ້າຈໍແບບສົດ.</string>
-    <string name="whats_new_fixes_title">ແກ້ໄຂຂໍ້ຜິດພາດເລັກນ້ອຍ</string>
-    <string name="whats_new_fixes_desc">ແຍກກ່ອງໂຕ້ຕອບການບັນທຶກໜ້າຈໍ, ຊິງຄ໌ສະຖານະກ້ອງສົດ ແລະ ປັບປຸງຄວາມໝັ້ນຄົງ.</string>
-    <string name="whats_new_btn">ເຂົ້າໃຈແລ້ວ</string>
+
+
+
+
+
+
+
+
+
 </resources>

@@ -163,13 +163,13 @@
     <string name="toast_camera_on">Пӯшонидани камера: ФАЪОЛ</string>
     <string name="toast_camera_off">Пӯшонидани камера: ХОМӮШ</string>
     <string name="toast_camera_armed">Камера: ФАЪОЛ (Бо сабт оғоз меёбад)</string>
-    <string name="whats_new_title">НАВГОНИҲО</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">Камераи рӯй илова шуд</string>
-    <string name="whats_new_facecam_desc">Барои танзимоти камера нишонаи камераро дар ҳубоб 2 сония нигоҳ доред (иваз кардани пеш/қафо, тағир додани андоза, шакли доира/росткунҷа).</string>
-    <string name="whats_new_widgets_title">2 виджет илова шуд</string>
-    <string name="whats_new_widgets_desc">Виджетҳои 1×1 Сабти фаврӣ ва 1×2 Маркази идоракунӣ бо гузаришҳои зиндаи садо, камера ва самт илова карда шуданд.</string>
-    <string name="whats_new_fixes_title">Ислоҳи хатогиҳои хурд</string>
-    <string name="whats_new_fixes_desc">Муколамаи ҷудогонаи сабти экран, ҳолати ҳамоҳангшудаи камераи зинда ва беҳтар кардани устуворӣ.</string>
-    <string name="whats_new_btn">ФАҲМИДАМ</string>
+
+
+
+
+
+
+
+
+
 </resources>

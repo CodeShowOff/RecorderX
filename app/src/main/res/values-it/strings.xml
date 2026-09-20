@@ -163,13 +163,13 @@
     <string name="toast_camera_on">Overlay fotocamera: ATTIVO</string>
     <string name="toast_camera_off">Overlay fotocamera: DISATTIVO</string>
     <string name="toast_camera_armed">Fotocamera: ATTIVA (Si avvia con la registrazione)</string>
-    <string name="whats_new_title">NOVITÀ</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">Aggiunta Face Cam</string>
-    <string name="whats_new_facecam_desc">Tieni premuta l\'icona della fotocamera nella bolla per 2 sec per le impostazioni (fronte/retro, ridimensiona, forma cerchio/rett).</string>
-    <string name="whats_new_widgets_title">Aggiunti 2 widget</string>
-    <string name="whats_new_widgets_desc">Aggiunti widget 1×1 Registrazione rapida e 1×2 Centro di controllo con controlli live per audio, fotocamera e orientamento.</string>
-    <string name="whats_new_fixes_title">Correzioni di bug minori</string>
-    <string name="whats_new_fixes_desc">Finestra di acquisizione schermo isolata, stato live della fotocamera sincronizzato e miglioramenti della stabilità.</string>
-    <string name="whats_new_btn">CAPITO</string>
+
+
+
+
+
+
+
+
+
 </resources>

@@ -163,13 +163,13 @@
     <string name="toast_camera_on">カメラオーバーレイ: ON</string>
     <string name="toast_camera_off">カメラオーバーレイ: OFF</string>
     <string name="toast_camera_armed">カメラ: ON (録画開始と同時に起動)</string>
-    <string name="whats_new_title">更新内容</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">フェイスカメラの追加</string>
-    <string name="whats_new_facecam_desc">バブル内のカメラアイコンを2秒長押しでカメラ設定を開きます（イン/アウトカメラ切替、サイズ変更、円形/長方形）。</string>
-    <string name="whats_new_widgets_title">2つのウィジェットを追加</string>
-    <string name="whats_new_widgets_desc">音声、カメラ、画面の向きをリアルタイムで切り替えられる 1×1 クイック録画＆ 1×2 コントロールセンターウィジェットを追加しました。</string>
-    <string name="whats_new_fixes_title">軽微な不具合の修正</string>
-    <string name="whats_new_fixes_desc">画面キャプチャダイアログの分離、カメラ状態のリアルタイム同期、および動作安定性の向上。</string>
-    <string name="whats_new_btn">了解</string>
+
+
+
+
+
+
+
+
+
 </resources>

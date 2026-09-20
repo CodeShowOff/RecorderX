@@ -163,13 +163,13 @@
     <string name="toast_camera_on">Камер давхарга: АСААЛТТАЙ</string>
     <string name="toast_camera_off">Камер давхарга: УНТРААЛТТАЙ</string>
     <string name="toast_camera_armed">Камер: АСААЛТТАЙ (Бичлэг эхлэх үед эхэлнэ)</string>
-    <string name="whats_new_title">ШИНЭ БОЛОМЖУУД</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">Face Cam нэмэгдсэн</string>
-    <string name="whats_new_facecam_desc">Камерын тохиргоог нээхийн тулд бөмбөлөг дээрх камерын дүрсийг 2 сек удаан дарна уу (урд/арын камер солих, хэмжээ өөрчлөх, дугуй/тэгш өнцөгт хэлбэр).</string>
-    <string name="whats_new_widgets_title">2 виджет нэмэгдсэн</string>
-    <string name="whats_new_widgets_desc">Шууд аудио, камер болон дэлгэцийн байрлал шилжүүлэх 1×1 Хурдан бичлэг &amp; 1×2 Удирдлагын төв виджетүүд нэмэгдсэн.</string>
-    <string name="whats_new_fixes_title">Жижиг алдааны засалтууд</string>
-    <string name="whats_new_fixes_desc">Дэлгэц бичих диалогийг тусгаарлаж, шууд камерын төлөвийг синхрончилж, тогтвортой байдлыг сайжруулсан.</string>
-    <string name="whats_new_btn">ОЙЛГОЛОО</string>
+
+
+
+
+
+
+
+
+
 </resources>

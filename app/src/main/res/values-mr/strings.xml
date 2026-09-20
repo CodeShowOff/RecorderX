@@ -163,13 +163,13 @@
     <string name="toast_camera_on">कॅमेरा ओव्हरले: सुरू</string>
     <string name="toast_camera_off">कॅमेरा ओव्हरले: बंद</string>
     <string name="toast_camera_armed">कॅमेरा: सुरू (रेकॉर्डिंगसह सुरू होईल)</string>
-    <string name="whats_new_title">नवीन काय आहे</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">फेस कॅम जोडले</string>
-    <string name="whats_new_facecam_desc">कॅमेरा सेटिंग्जसाठी बबलमधील कॅमेरा चिन्हावर 2 सेकंद दाबून ठेवा (समोरचा/मागील बदला, आकार बदला, वर्तुळ/आयात आकार)।</string>
-    <string name="whats_new_widgets_title">2 विजेट्स जोडले</string>
-    <string name="whats_new_widgets_desc">लाइव्ह ऑडिओ, कॅमेरा आणि ओरिएंटेशन टॉगलसह 1×1 जलद रेकॉर्ड आणि 1×2 नियंत्रण केंद्र विजेट्स जोडले.</string>
-    <string name="whats_new_fixes_title">लहान दोष निराकरणे</string>
-    <string name="whats_new_fixes_desc">स्वतंत्र स्क्रीन कॅप्चर संवाद, सिंक्रोनाइझ केलेले थेट कॅमेरा स्थिती आणि स्थिरता सुधारणा.</string>
-    <string name="whats_new_btn">समजले</string>
+
+
+
+
+
+
+
+
+
 </resources>

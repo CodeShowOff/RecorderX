@@ -163,13 +163,13 @@
     <string name="toast_camera_on">Hamparan Kamera: AKTIF</string>
     <string name="toast_camera_off">Hamparan Kamera: NONAKTIF</string>
     <string name="toast_camera_armed">Kamera: AKTIF (Mulai saat merekam)</string>
-    <string name="whats_new_title">YANG BARU</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">Menambahkan Face Cam</string>
-    <string name="whats_new_facecam_desc">Tahan 2 detik pada ikon kamera di gelembung untuk setelan kamera (ganti depan/belakang, ubah ukuran, bentuk bulat/persegi).</string>
-    <string name="whats_new_widgets_title">Menambahkan 2 Widget</string>
-    <string name="whats_new_widgets_desc">Menambahkan widget Rekam Cepat 1×1 &amp; Pusat Kontrol 1×2 dengan tombol langsung audio, kamera, dan orientasi.</string>
-    <string name="whats_new_fixes_title">Perbaikan Bug Minor</string>
-    <string name="whats_new_fixes_desc">Dialog tangkapan layar terisolasi, status kamera langsung yang disinkronkan, dan peningkatan stabilitas.</string>
-    <string name="whats_new_btn">MENGERTI</string>
+
+
+
+
+
+
+
+
+
 </resources>

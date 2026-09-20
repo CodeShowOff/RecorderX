@@ -163,13 +163,13 @@
     <string name="toast_camera_on">કેમેરા ઓવરલે: ચાલુ</string>
     <string name="toast_camera_off">કેમેરા ઓવરલે: બંધ</string>
     <string name="toast_camera_armed">કેમેરા: ચાલુ (રેકોર્ડિંગ સાથે શરૂ થશે)</string>
-    <string name="whats_new_title">નવું શું છે</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">ફેસ કેમ ઉમેરાયું</string>
-    <string name="whats_new_facecam_desc">કેમેરા સેટિંગ્સ માટે બબલ પરના કેમેરા આઇકોન પર 2 સેકન્ડ દબાવી રાખો (આગળ/પાછળ બદલો, કદ બદલો, ગોળ/લંબચોરસ આકાર).</string>
-    <string name="whats_new_widgets_title">2 વિજેટ્સ ઉમેરાયા</string>
-    <string name="whats_new_widgets_desc">લાઇવ ઑડિઓ, કેમેરા અને ઓરિએન્ટેશન ટૉગલ સાથે 1×1 ઝડપી રેકોર્ડ અને 1×2 નિયંત્રણ કેન્દ્ર વિજેટ્સ ઉમેરાયા.</string>
-    <string name="whats_new_fixes_title">નાની ભૂલો સુધારી</string>
-    <string name="whats_new_fixes_desc">અલગ સ્ક્રીન કૅપ્ચર ડાયલોગ, સિંક્રનાઇઝ્ડ લાઇવ કેમેરા સ્થિતિ અને સ્થિરતામાં સુધારાઓ.</string>
-    <string name="whats_new_btn">સમજાયું</string>
+
+
+
+
+
+
+
+
+
 </resources>

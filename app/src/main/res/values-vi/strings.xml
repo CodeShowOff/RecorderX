@@ -163,13 +163,13 @@
     <string name="toast_camera_on">Lớp phủ máy ảnh: BẬT</string>
     <string name="toast_camera_off">Lớp phủ máy ảnh: TẮT</string>
     <string name="toast_camera_armed">Máy ảnh: BẬT (Bắt đầu khi ghi hình)</string>
-    <string name="whats_new_title">CÓ GÌ MỚI</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">Thêm Face Cam</string>
-    <string name="whats_new_facecam_desc">Giữ 2 giây vào biểu tượng máy ảnh trên bóng nổi để mở cài đặt (chuyển trước/sau, đổi kích thước, hình tròn/chữ nhật).</string>
-    <string name="whats_new_widgets_title">Thêm 2 Tiện ích</string>
-    <string name="whats_new_widgets_desc">Thêm tiện ích Ghi nhanh 1×1 &amp; Trung tâm điều khiển 1×2 với các nút chuyển đổi âm thanh, máy ảnh và xoay màn hình trực tiếp.</string>
-    <string name="whats_new_fixes_title">Sửa một số lỗi nhỏ</string>
-    <string name="whats_new_fixes_desc">Cách ly hộp thoại chụp màn hình, đồng bộ hóa trạng thái máy ảnh trực tiếp và cải thiện độ ổn định.</string>
-    <string name="whats_new_btn">ĐÃ HIỂU</string>
+
+
+
+
+
+
+
+
+
 </resources>

@@ -163,13 +163,13 @@
     <string name="toast_camera_on">የካሜራ ተደራቢ፦ በርቷል</string>
     <string name="toast_camera_off">የካሜራ ተደራቢ፦ ጠፍቷል</string>
     <string name="toast_camera_armed">ካሜራ፦ በርቷል (ከመቅረጽ ጋር ይጀምራል)</string>
-    <string name="whats_new_title">ምን አዲስ ነገር አለ</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">የፊት ካሜራ ታክሏል</string>
-    <string name="whats_new_facecam_desc">ለካሜራ ቅንብሮች በአረፋው ውስጥ ያለውን የካሜራ አዶ ለ2 ሰከንድ ተጭነው ይያዙ (የፊት/የኋላ መቀያየር፣ መጠን መቀየር፣ የክብ/አራት ማዕዘን ቅርጽ)።</string>
-    <string name="whats_new_widgets_title">2 ዊጅቶች ታክለዋል</string>
-    <string name="whats_new_widgets_desc">የቀጥታ ኦዲዮ፣ ካሜራ እና አቅጣጫ መቀያየሪያዎች ያሏቸው 1×1 ፈጣን ቅጂ እና 1×2 የመቆጣጠሪያ ማዕከል ዊጅቶች ታክለዋል።</string>
-    <string name="whats_new_fixes_title">አነስተኛ የሳንካ ጥገናዎች</string>
-    <string name="whats_new_fixes_desc">የተለየ የስክሪን ቀረጻ መገናኛ፣ የተመሳሰለ የቀጥታ ካሜራ ሁኔታ እና የመረጋጋት ማሻሻያዎች።</string>
-    <string name="whats_new_btn">ገባኝ</string>
+
+
+
+
+
+
+
+
+
 </resources>

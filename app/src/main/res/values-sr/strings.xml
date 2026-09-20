@@ -163,13 +163,13 @@
     <string name="toast_camera_on">Преклапање камере: УКЉ</string>
     <string name="toast_camera_off">Преклапање камере: ИСКЉ</string>
     <string name="toast_camera_armed">Камера: УКЉ (Покреће се са снимањем)</string>
-    <string name="whats_new_title">ШТА ЈЕ НОВО</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">Додата Face Cam</string>
-    <string name="whats_new_facecam_desc">Држите 2 сек. икону камере у мехуру за подешавања (промена предња/задња, величина, облик круг/правоугаоник).</string>
-    <string name="whats_new_widgets_title">Додата 2 виџета</string>
-    <string name="whats_new_widgets_desc">Додати виџети 1×1 Брзо снимање и 1×2 Контролни центар са прекидачима звука, камере и оријентације уживо.</string>
-    <string name="whats_new_fixes_title">Мање исправке грешака</string>
-    <string name="whats_new_fixes_desc">Изолован дијалог снимања екрана, синхронизован статус камере уживо и побољшања стабилности.</string>
-    <string name="whats_new_btn">СХВАТИО САМ</string>
+
+
+
+
+
+
+
+
+
 </resources>

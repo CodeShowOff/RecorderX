@@ -163,13 +163,13 @@
     <string name="toast_camera_on">Kameras pārklājums: IESLĒGTS</string>
     <string name="toast_camera_off">Kameras pārklājums: IZSLĒGTS</string>
     <string name="toast_camera_armed">Kamera: IESLĒGTA (Sākas ar ierakstīšanu)</string>
-    <string name="whats_new_title">JAUNUMI</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">Pievienota sejas kamera</string>
-    <string name="whats_new_facecam_desc">Turiet 2 sekundes kameras ikonu burbulī kameras iestatījumiem (pārslēgt priekšējo/aizmugurējo, mainīt izmēru, apļa/taisnstūra formu).</string>
-    <string name="whats_new_widgets_title">Pievienoti 2 logrīki</string>
-    <string name="whats_new_widgets_desc">Pievienoti 1×1 Ātrā ieraksta un 1×2 Vadības centra logrīki ar tiešo audio, kameras un orientācijas pārslēgšanu.</string>
-    <string name="whats_new_fixes_title">Nelieli kļūdu labojumi</string>
-    <string name="whats_new_fixes_desc">Izolēts ekrāna uzņemšanas dialogs, sinhronizēts tiešais kameras statuss un stabilitātes uzlabojumi.</string>
-    <string name="whats_new_btn">SAPRATU</string>
+
+
+
+
+
+
+
+
+
 </resources>

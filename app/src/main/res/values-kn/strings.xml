@@ -163,13 +163,13 @@
     <string name="toast_camera_on">ಕ್ಯಾಮೆರಾ ಓವರ್‌ಲೇ: ಆನ್</string>
     <string name="toast_camera_off">ಕ್ಯಾಮೆರಾ ಓವರ್‌ಲೇ: ಆಫ್</string>
     <string name="toast_camera_armed">ಕ್ಯಾಮೆರಾ: ಆನ್ (ರೆಕಾರ್ಡಿಂಗ್‌ನೊಂದಿಗೆ ಪ್ರಾರಂಭವಾಗುತ್ತದೆ)</string>
-    <string name="whats_new_title">ಹೊಸತೇನಿದೆ</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">ಫೇಸ್ ಕ್ಯಾಮ್ ಸೇರಿಸಲಾಗಿದೆ</string>
-    <string name="whats_new_facecam_desc">ಕ್ಯಾಮೆರಾ ಸೆಟ್ಟಿಂಗ್‌ಗಳಿಗಾಗಿ ಬಬಲ್‌ನಲ್ಲಿರುವ ಕ್ಯಾಮೆರಾ ಐಕಾನ್ ಅನ್ನು 2 ಸೆಕೆಂಡು ಒತ್ತಿ ಹಿಡಿಯಿರಿ (ಮುಂಭಾಗ/ಹಿಂಭಾಗ ಬದಲಿಸಿ, ಮರುಗಾತ್ರಗೊಳಿಸಿ, ವೃತ್ತ/ಆಯತ ಆಕಾರ).</string>
-    <string name="whats_new_widgets_title">2 ವಿಜೆಟ್‌ಗಳನ್ನು ಸೇರಿಸಲಾಗಿದೆ</string>
-    <string name="whats_new_widgets_desc">ಲೈವ್ ಆಡಿಯೊ, ಕ್ಯಾಮೆರಾ ಮತ್ತು ಓರಿಯಂಟೇಶನ್ ಟಾಗಲ್‌ಗಳೊಂದಿಗೆ 1×1 ತ್ವರಿತ ರೆಕಾರ್ಡ್ ಮತ್ತು 1×2 ನಿಯಂತ್ರಣ ಕೇಂದ್ರ ವಿಜೆಟ್‌ಗಳನ್ನು ಸೇರಿಸಲಾಗಿದೆ.</string>
-    <string name="whats_new_fixes_title">ಸಣ್ಣಪುಟ್ಟ ದೋಷ ಪರಿಹಾರಗಳು</string>
-    <string name="whats_new_fixes_desc">ಪ್ರತ್ಯೇಕ ಪರದೆ ಕ್ಯಾಪ್ಚರ್ ಡೈಲಾಗ್, ಸಿಂಕ್ರೊನೈಸ್ ಮಾಡಿದ ಲೈವ್ ಕ್ಯಾಮೆರಾ ಸ್ಥಿತಿ ಮತ್ತು ಸ್ಥಿರತೆಯ ಸುಧಾರಣೆಗಳು.</string>
-    <string name="whats_new_btn">ತಿಳಿಯಿತು</string>
+
+
+
+
+
+
+
+
+
 </resources>

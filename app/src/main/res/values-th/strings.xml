@@ -163,13 +163,13 @@
     <string name="toast_camera_on">กล้องโอเวอร์เลย์: เปิด</string>
     <string name="toast_camera_off">กล้องโอเวอร์เลย์: ปิด</string>
     <string name="toast_camera_armed">กล้อง: เปิด (เริ่มพร้อมกับการบันทึก)</string>
-    <string name="whats_new_title">มีอะไรใหม่</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">เพิ่ม Face Cam</string>
-    <string name="whats_new_facecam_desc">กดไอคอนกล้องในบับเบิ้ลค้างไว้ 2 วินาทีเพื่อตั้งค่ากล้อง (สลับกล้องหน้า/หลัง, ปรับขนาด, รูปทรงกลม/สี่เหลี่ยมผืนผ้า)</string>
-    <string name="whats_new_widgets_title">เพิ่ม 2 วิดเจ็ต</string>
-    <string name="whats_new_widgets_desc">เพิ่มวิดเจ็ต บันทึกด่วน 1×1 &amp; ศูนย์ควบคุม 1×2 พร้อมปุ่มสลับเสียง กล้อง และทิศทางหน้าจอแบบสด</string>
-    <string name="whats_new_fixes_title">แก้ไขข้อผิดพลาดเล็กน้อย</string>
-    <string name="whats_new_fixes_desc">แยกกล่องโต้ตอบบันทึกหน้าจอ ซิงค์สถานะกล้องสด และปรับปรุงความเสถียร</string>
-    <string name="whats_new_btn">เข้าใจแล้ว</string>
+
+
+
+
+
+
+
+
+
 </resources>

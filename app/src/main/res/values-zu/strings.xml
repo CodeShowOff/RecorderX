@@ -163,13 +163,13 @@
     <string name="toast_camera_on">Ukumbondela Kwekhamera: VULIWE</string>
     <string name="toast_camera_off">Ukumbondela Kwekhamera: VALIWE</string>
     <string name="toast_camera_armed">Ikhamera: VULIWE (Iqala ngokurekhoda)</string>
-    <string name="whats_new_title">OKUSHA</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">Kwengezwe i-Face Cam</string>
-    <string name="whats_new_facecam_desc">Bamba imizuzwana engu-2 kusithonjana sekhamera ebhamuzeni ukuze uthole izilungiselelo zekhamera (shintsha ngaphambili/emuva, shintsha usayizi, isimo sombuthano/unxande).</string>
-    <string name="whats_new_widgets_title">Kwengezwe amawijethi angu-2</string>
-    <string name="whats_new_widgets_desc">Kwengezwe amawijethi we-1×1 Ukurekhoda Okusheshayo &amp; 1×2 Isikhungo Sokulawula anezilawuli zomsindo bukhoma, ikhamera, kanye nokuqondisa.</string>
-    <string name="whats_new_fixes_title">Ukulungiswa Kwamaphutha Amancane</string>
-    <string name="whats_new_fixes_desc">Ibhokisi lengxoxo elihlukanisiwe lokuthwebula isikrini, isimo sekhamera ebukhoma esivumelanisiwe, kanye nokuthuthukiswa kokuzinza.</string>
-    <string name="whats_new_btn">NGIYAQONDA</string>
+
+
+
+
+
+
+
+
+
 </resources>

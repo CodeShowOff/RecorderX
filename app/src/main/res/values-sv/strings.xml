@@ -163,13 +163,13 @@
     <string name="toast_camera_on">Kameraöverlagring: PÅ</string>
     <string name="toast_camera_off">Kameraöverlagring: AV</string>
     <string name="toast_camera_armed">Kamera: PÅ (Startar med inspelning)</string>
-    <string name="whats_new_title">VAD ÄR NYTT</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">Lagt till Face Cam</string>
-    <string name="whats_new_facecam_desc">Håll kamerasymbolen i bubblan i 2 sek för kamerainställningar (växla fram/bak, ändra storlek, form cirkel/rektangel).</string>
-    <string name="whats_new_widgets_title">Lagt till 2 widgetar</string>
-    <string name="whats_new_widgets_desc">Lagt till widgetar för 1×1 Snabbspela in och 1×2 Kontrollcenter med direktreglage för ljud, kamera och orientering.</string>
-    <string name="whats_new_fixes_title">Mindre felkorrigeringar</string>
-    <string name="whats_new_fixes_desc">Isolerad skärminspelningsdialog, synkroniserad livekamerastatus och stabilitetsförbättringar.</string>
-    <string name="whats_new_btn">FÖRSTÅTT</string>
+
+
+
+
+
+
+
+
+
 </resources>

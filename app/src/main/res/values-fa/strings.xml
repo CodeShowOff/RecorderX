@@ -163,13 +163,13 @@
     <string name="toast_camera_on">پوشش دوربین: روشن</string>
     <string name="toast_camera_off">پوشش دوربین: خاموش</string>
     <string name="toast_camera_armed">دوربین: روشن (همزمان با شروع ضبط)</string>
-    <string name="whats_new_title">تغییرات جدید</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">افزودن فیس‌کم</string>
-    <string name="whats_new_facecam_desc">برای تنظیمات دوربین، آیکون دوربین در حباب را ۲ ثانیه نگه دارید (تغییر جلو/پشت، تغییر اندازه، شکل دایره/مستطیل).</string>
-    <string name="whats_new_widgets_title">افزودن ۲ ویجت</string>
-    <string name="whats_new_widgets_desc">ویجت‌های ۱×۱ ضبط سریع و ۱×۲ مرکز کنترل با کلیدهای تغییر زنده صدا، دوربین و جهت اضافه شدند.</string>
-    <string name="whats_new_fixes_title">رفع اشکالات جزئی</string>
-    <string name="whats_new_fixes_desc">جداسازی دیالوگ ضبط صفحه، همگام‌سازی وضعیت زنده دوربین و بهبود پایداری.</string>
-    <string name="whats_new_btn">متوجه شدم</string>
+
+
+
+
+
+
+
+
+
 </resources>

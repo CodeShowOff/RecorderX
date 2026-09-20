@@ -163,13 +163,13 @@
     <string name="toast_camera_on">པར་ཆས་ཐོག་བརྩེགས: ཁ་ཕྱེས།</string>
     <string name="toast_camera_off">པར་ཆས་ཐོག་བརྩེགས: ཁ་བརྒྱབ།</string>
     <string name="toast_camera_armed">པར་ཆས: ཁ་ཕྱེས། (སྒྲ་ཕབ་དང་མཉམ་དུ་འགོ་ཚུགས)</string>
-    <string name="whats_new_title">གསར་སྒྱུར་ནང་དོན།</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">གདོང་དབྱིབས་པར་ཆས་གསར་སྣོན།</string>
-    <string name="whats_new_facecam_desc">ལྦུ་བའི་ནང་གི་པར་ཆས་རྟགས་ལ་སྐར་ཆ་ ༢ མནན་ན་པར་ཆས་སྒྲིག་བཀོད་བྱེད་ཐུབ (མདུན་རྒྱབ་བརྗེ་བ། ཆེ་ཆུང་སྒྲིག་པ། སྒོར་སྒོར་དང་གྲུ་བཞིའི་དབྱིབས)།</string>
-    <string name="whats_new_widgets_title">ལྷུ་ལག་ ༢ གསར་སྣོན།</string>
-    <string name="whats_new_widgets_desc">1×1 མྱུར་དུ་སྒྲ་ཕབ་དང་ 1×2 ཚོད་འཛིན་ལྟེ་གནས་ལྷུ་ལག་གསར་སྣོན་བྱས་ཤིང་། དངོས་ཡོད་སྒྲ་དབྱངས་དང་པར་ཆས། ཕྱོགས་མཚམས་བརྗེ་སྤོར་ཐུབ།</string>
-    <string name="whats_new_fixes_title">སྐྱོན་ཆུང་ངུ་བཟོ་བཅོས།</string>
-    <string name="whats_new_fixes_desc">གསལ་ཤེལ་སྒྲ་ཕབ་གླེང་སྒྲོམ་ལོགས་སུ་བཀར་བ། དངོས་ཡོད་པར་ཆས་གནས་སྟངས་མཉམ་འགྲོས། བརྟན་བརླིང་རང་བཞིན་མཐོར་འདེགས།</string>
-    <string name="whats_new_btn">ཧ་གོ་སོང་།</string>
+
+
+
+
+
+
+
+
+
 </resources>

@@ -163,13 +163,13 @@
     <string name="toast_camera_on">相機畫面：開啟</string>
     <string name="toast_camera_off">相機畫面：關閉</string>
     <string name="toast_camera_armed">相機：開啟（隨錄影一同啟動）</string>
-    <string name="whats_new_title">最新功能</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">新增臉部鏡頭</string>
-    <string name="whats_new_facecam_desc">長按懸浮球中的相機圖示 2 秒即可開啟相機設定（前後鏡頭切換、調整大小、圓形/長方形）。</string>
-    <string name="whats_new_widgets_title">新增 2 個小工具</string>
-    <string name="whats_new_widgets_desc">新增 1×1 快捷錄製與 1×2 控制中心小工具，支援即時切換音訊、相機與螢幕方向。</string>
-    <string name="whats_new_fixes_title">錯誤修復與微調</string>
-    <string name="whats_new_fixes_desc">隔離螢幕錄製提示框，同步即時相機狀態，並提升整體穩定性。</string>
-    <string name="whats_new_btn">知道了</string>
+
+
+
+
+
+
+
+
+
 </resources>

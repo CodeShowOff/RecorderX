@@ -209,14 +209,14 @@
     <string name="toast_camera_off">Camera Overlay: OFF</string>
     <string name="toast_camera_armed">Camera: ON (Starts with recording)</string>
 
-    <!-- What's New Dialog (v3.1.1) -->
-    <string name="whats_new_title">WHAT\'S NEW</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">Added Face Cam</string>
-    <string name="whats_new_facecam_desc">Hold 2 sec on camera icon in bubble for cam settings (switch front/back, resize, circle/rect shape).</string>
-    <string name="whats_new_widgets_title">Added 2 Widgets</string>
-    <string name="whats_new_widgets_desc">Added 1×1 Quick Record &amp; 1×2 Control Center widgets with live audio, camera, and orientation toggles.</string>
-    <string name="whats_new_fixes_title">Minor Bug Fixes</string>
-    <string name="whats_new_fixes_desc">Isolated screen capture dialog, synchronized live camera status, and stability improvements.</string>
-    <string name="whats_new_btn">GOT IT</string>
+    <!-- Welcome Dialog (v1.0.0 Initial Release) -->
+    <string name="welcome_title">WELCOME TO RECORDERX</string>
+    <string name="welcome_version">v1.0.0</string>
+    <string name="welcome_feature1_title">High-Quality Recording</string>
+    <string name="welcome_feature1_desc">Record in 4K resolution at up to 120 FPS with next-gen AV1, H.265, and H.264 codecs for maximum clarity.</string>
+    <string name="welcome_feature2_title">Advanced Audio &amp; Facecam</string>
+    <string name="welcome_feature2_desc">Capture internal system audio, microphone, or both simultaneously while overlaying a customizable facecam.</string>
+    <string name="welcome_feature3_title">Floating Bubble Controls</string>
+    <string name="welcome_feature3_desc">Manage recordings instantly from anywhere using the always-on floating bubble and quick-access widgets.</string>
+    <string name="welcome_btn">LET\'S GO</string>
 </resources>

@@ -163,13 +163,13 @@
     <string name="toast_camera_on">Superposición de cámara: ACTIVADA</string>
     <string name="toast_camera_off">Superposición de cámara: DESACTIVADA</string>
     <string name="toast_camera_armed">Cámara: ACTIVADA (Comeza coa gravación)</string>
-    <string name="whats_new_title">NOVIDADES</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">Engadiuse cámara facial</string>
-    <string name="whats_new_facecam_desc">Manteña premida 2 s a icona da cámara na burbulla para axustes da cámara (cambiar frontal/traseira, redimensionar, forma circular/rectangular).</string>
-    <string name="whats_new_widgets_title">Engadíronse 2 widgets</string>
-    <string name="whats_new_widgets_desc">Engadíronse widgets de 1×1 Gravación rápida e 1×2 Centro de control con alternadores de audio en directo, cámara e orientación.</string>
-    <string name="whats_new_fixes_title">Pequenas correccións de erros</string>
-    <string name="whats_new_fixes_desc">Cadro de diálogo de captura de pantalla illado, estado da cámara en directo sincronizado e melloras de estabilidade.</string>
-    <string name="whats_new_btn">ENTENDIDO</string>
+
+
+
+
+
+
+
+
+
 </resources>

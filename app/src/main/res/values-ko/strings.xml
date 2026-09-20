@@ -163,13 +163,13 @@
     <string name="toast_camera_on">카메라 오버레이: 켜짐</string>
     <string name="toast_camera_off">카메라 오버레이: 꺼짐</string>
     <string name="toast_camera_armed">카메라: 켜짐 (녹화 시작 시 표시)</string>
-    <string name="whats_new_title">업데이트 소식</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">페이스캠 기능 추가</string>
-    <string name="whats_new_facecam_desc">버블 내 카메라 아이콘을 2초간 길게 누르면 카메라 설정이 열립니다(전면/후면 전환, 크기 조절, 원형/직사각형).</string>
-    <string name="whats_new_widgets_title">위젯 2종 추가</string>
-    <string name="whats_new_widgets_desc">실시간 오디오, 카메라, 화면 방향 토글을 지원하는 1×1 빠른 녹화 및 1×2 제어 센터 위젯이 추가되었습니다.</string>
-    <string name="whats_new_fixes_title">기타 오류 수정</string>
-    <string name="whats_new_fixes_desc">화면 캡처 대화상자 격리, 실시간 카메라 상태 동기화 및 안정성 개선.</string>
-    <string name="whats_new_btn">확인</string>
+
+
+
+
+
+
+
+
+
 </resources>

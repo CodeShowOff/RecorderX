@@ -12,5 +12,15 @@
         <item name="android:windowLightStatusBar">true</item>
         <item name="elevationOverlayEnabled">false</item>
         <item name="colorSurface">@color/bg_main</item>
+        <item name="sliderStyle">@style/Widget.Custom.Slider</item>
+    </style>
+
+    <style name="Widget.Custom.Slider" parent="Widget.Material3.Slider">
+        <item name="labelStyle">@style/Widget.Custom.Tooltip</item>
+    </style>
+
+    <style name="Widget.Custom.Tooltip" parent="Widget.Material3.Tooltip">
+        <item name="backgroundTint">@color/slider_blue</item>
+        <item name="android:textColor">@color/bg_main</item>
     </style>
 </resources>

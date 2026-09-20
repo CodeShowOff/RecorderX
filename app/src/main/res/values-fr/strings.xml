@@ -163,13 +163,13 @@
     <string name="toast_camera_on">Superposition caméra : ACTIVÉE</string>
     <string name="toast_camera_off">Superposition caméra : DÉSACTIVÉE</string>
     <string name="toast_camera_armed">Caméra : ACTIVÉE (Démarre avec l\'enregistrement)</string>
-    <string name="whats_new_title">NOUVEAUTÉS</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">Ajout de la Face Cam</string>
-    <string name="whats_new_facecam_desc">Maintenez 2 s l\'icône de caméra dans la bulle pour les paramètres (commuter avant/arrière, redimensionner, forme cercle/rect).</string>
-    <string name="whats_new_widgets_title">2 widgets ajoutés</string>
-    <string name="whats_new_widgets_desc">Ajout des widgets 1×1 Enregistrement rapide et 1×2 Centre de contrôle avec bascules directes pour l\'audio, la caméra et l\'orientation.</string>
-    <string name="whats_new_fixes_title">Corrections de bugs mineurs</string>
-    <string name="whats_new_fixes_desc">Boîte de dialogue de capture d\'écran isolée, synchronisation de l\'état de la caméra en direct et améliorations de la stabilité.</string>
-    <string name="whats_new_btn">COMPRIS</string>
+
+
+
+
+
+
+
+
+
 </resources>

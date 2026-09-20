@@ -163,13 +163,13 @@
     <string name="toast_camera_on">Camera-overlay: AAN</string>
     <string name="toast_camera_off">Camera-overlay: UIT</string>
     <string name="toast_camera_armed">Camera: AAN (Start met opname)</string>
-    <string name="whats_new_title">WAT IS ER NIEUW</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">Face Cam toegevoegd</string>
-    <string name="whats_new_facecam_desc">Houd het camerapictogram in de bubbel 2 sec ingedrukt voor camera-instellingen (voor/achter wisselen, formaat wijzigen, cirkel/rechthoek).</string>
-    <string name="whats_new_widgets_title">2 widgets toegevoegd</string>
-    <string name="whats_new_widgets_desc">Widgets 1×1 Snelle opname en 1×2 Bedieningspaneel toegevoegd met live schakelaars voor audio, camera en oriëntatie.</string>
-    <string name="whats_new_fixes_title">Kleine foutoplossingen</string>
-    <string name="whats_new_fixes_desc">Geïsoleerd dialoogvenster voor schermopname, gesynchroniseerde live camerastatus en stabiliteitsverbeteringen.</string>
-    <string name="whats_new_btn">BEGREPEN</string>
+
+
+
+
+
+
+
+
+
 </resources>

@@ -163,13 +163,13 @@
     <string name="toast_camera_on">क्यामेरा ओभरले: अन</string>
     <string name="toast_camera_off">क्यामेरा ओभरले: अफ</string>
     <string name="toast_camera_armed">क्यामेरा: अन (रेकर्डिङसँगै सुरु हुन्छ)</string>
-    <string name="whats_new_title">नयाँ के छ</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">फेस क्याम थपियो</string>
-    <string name="whats_new_facecam_desc">क्यामेरा सेटिङका लागि बबलको क्यामेरा प्रतिमामा २ सेकेन्ड थिच्नुहोस् (अगाडि/पछाडि बदल्नुहोस्, रिसाइज, वृत्त/आयत आकार)।</string>
-    <string name="whats_new_widgets_title">२ विजेटहरू थपिए</string>
-    <string name="whats_new_widgets_desc">प्रत्यक्ष अडियो, क्यामेरा र ओरिएन्टेसन टगलहरूको साथ १×१ द्रुत रेकर्ड र १×२ नियन्त्रण केन्द्र विजेटहरू थपिए।</string>
-    <string name="whats_new_fixes_title">साना बग सुधारहरू</string>
-    <string name="whats_new_fixes_desc">पृथक स्क्रिन क्याप्चर संवाद, सिङ्क्रोनाइज्ड प्रत्यक्ष क्यामेरा स्थिति र स्थिरता सुधारहरू।</string>
-    <string name="whats_new_btn">बुझें</string>
+
+
+
+
+
+
+
+
+
 </resources>

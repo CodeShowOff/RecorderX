@@ -163,13 +163,13 @@
     <string name="toast_camera_on">Prekrivanje kamere: VKLOP</string>
     <string name="toast_camera_off">Prekrivanje kamere: IZKLOP</string>
     <string name="toast_camera_armed">Kamera: VKLOP (Začne se s snemanjem)</string>
-    <string name="whats_new_title">KAJ JE NOVEGA</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">Dodana sprednja kamera</string>
-    <string name="whats_new_facecam_desc">Pridržite 2 sekundi ikono kamere v mehurčku za nastavitve kamere (preklop spredaj/zadaj, sprememba velikosti, krožna/pravokotna oblika).</string>
-    <string name="whats_new_widgets_title">Dodana 2 gradnika</string>
-    <string name="whats_new_widgets_desc">Dodana gradnika 1×1 Hitro snemanje in 1×2 Nadzorno središče s preklopi zvoka v živo, kamere in usmerjenosti.</string>
-    <string name="whats_new_fixes_title">Manjši popravki napak</string>
-    <string name="whats_new_fixes_desc">Izolirano pogovorno okno zajema zaslona, sinhronizirano stanje kamere v živo in izboljšave stabilnosti.</string>
-    <string name="whats_new_btn">RAZUMEM</string>
+
+
+
+
+
+
+
+
+
 </resources>

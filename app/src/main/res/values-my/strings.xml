@@ -163,13 +163,13 @@
     <string name="toast_camera_on">ကင်မရာ အလွှာ: ဖွင့်ထားသည်</string>
     <string name="toast_camera_off">ကင်မရာ အလွှာ: ပိတ်ထားသည်</string>
     <string name="toast_camera_armed">ကင်မရာ: ဖွင့်ထားသည် (ဖမ်းယူမှုနှင့်အတူ စတင်မည်)</string>
-    <string name="whats_new_title">အသစ်ပါဝင်မှုများ</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">Face Cam ထည့်သွင်းထားသည်</string>
-    <string name="whats_new_facecam_desc">ကင်မရာဆက်တင်များအတွက် ပူဖောင်းရှိ ကင်မရာပုံကို ၂ စက္ကန့်ကြာ ဖိထားပါ (ရှေ့/နောက်ပြောင်း၊ အရွယ်အစားညှိ၊ စက်ဝိုင်း/စတုဂံပုံစံ)။</string>
-    <string name="whats_new_widgets_title">ဝိဂျက် ၂ ခု ထည့်သွင်းထားသည်</string>
-    <string name="whats_new_widgets_desc">တိုက်ရိုက်အသံ၊ ကင်မရာနှင့် အနေအထားခလုတ်များပါသော 1×1 အမြန်ဖမ်းယူမှုနှင့် 1×2 ထိန်းချုပ်ရေးဗဟို ဝိဂျက်များကို ထည့်သွင်းထားသည်။</string>
-    <string name="whats_new_fixes_title">အသေးစား ပြင်ဆင်မှုများ</string>
-    <string name="whats_new_fixes_desc">စခရင်ဖမ်းယူမှု ဒိုင်ယာလော့ခ်ကို ခွဲထုတ်ခြင်း၊ တိုက်ရိုက်ကင်မရာ အခြေအနေကို တစ်ပြိုင်တည်းပြုလုပ်ခြင်းနှင့် တည်ငြိမ်မှု ပိုမိုကောင်းမွန်စေခြင်း။</string>
-    <string name="whats_new_btn">နားလည်ပါပြီ</string>
+
+
+
+
+
+
+
+
+
 </resources>

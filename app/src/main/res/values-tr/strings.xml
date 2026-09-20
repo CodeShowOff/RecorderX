@@ -163,13 +163,13 @@
     <string name="toast_camera_on">Kamera Katmanı: AÇIK</string>
     <string name="toast_camera_off">Kamera Katmanı: KAPALI</string>
     <string name="toast_camera_armed">Kamera: AÇIK (Kayıtla birlikte başlar)</string>
-    <string name="whats_new_title">YENİLİKLER</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">Ön Kamera Eklendi</string>
-    <string name="whats_new_facecam_desc">Kamera ayarları için kabarcıktaki kamera simgesine 2 saniye basılı tutun (ön/arka değiştir, yeniden boyutlandır, daire/dikdörtgen şekli).</string>
-    <string name="whats_new_widgets_title">2 Widget Eklendi</string>
-    <string name="whats_new_widgets_desc">Canlı ses, kamera ve yönlendirme geçişlerine sahip 1×1 Hızlı Kayıt ve 1×2 Kontrol Merkezi widget\'ları eklendi.</string>
-    <string name="whats_new_fixes_title">Küçük Hata Düzeltmeleri</string>
-    <string name="whats_new_fixes_desc">Yalıtılmış ekran yakalama iletişim kutusu, senkronize canlı kamera durumu ve kararlılık iyileştirmeleri.</string>
-    <string name="whats_new_btn">ANLADIM</string>
+
+
+
+
+
+
+
+
+
 </resources>

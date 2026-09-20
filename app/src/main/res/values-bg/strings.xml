@@ -163,13 +163,13 @@
     <string name="toast_camera_on">Наслагване на камера: ВКЛ</string>
     <string name="toast_camera_off">Наслагване на камера: ИЗКЛ</string>
     <string name="toast_camera_armed">Камера: ВКЛ (Стартира със записа)</string>
-    <string name="whats_new_title">КАКВО НОВО</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">Добавена Face Cam</string>
-    <string name="whats_new_facecam_desc">Задръжте 2 сек върху иконата на камерата в балона за настройки (смяна предна/задна, преоразмеряване, кръг/правоъгълник).</string>
-    <string name="whats_new_widgets_title">Добавени 2 уиджета</string>
-    <string name="whats_new_widgets_desc">Добавени уиджети 1×1 Бърз запис и 1×2 Контролен център с превключватели на живо за звук, камера и ориентация.</string>
-    <string name="whats_new_fixes_title">Малки корекции на грешки</string>
-    <string name="whats_new_fixes_desc">Изолиран диалогов прозорец за заснемане на екрана, синхронизирано състояние на камерата на живо и подобрения в стабилността.</string>
-    <string name="whats_new_btn">РАЗБРАХ</string>
+
+
+
+
+
+
+
+
+
 </resources>

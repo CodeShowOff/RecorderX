@@ -163,13 +163,13 @@
     <string name="toast_camera_on">ផ្ទាំងកាមេរ៉ា: បើក</string>
     <string name="toast_camera_off">ផ្ទាំងកាមេរ៉ា: បិទ</string>
     <string name="toast_camera_armed">កាមេរ៉ា: បើក (ចាប់ផ្តើមជាមួយការថត)</string>
-    <string name="whats_new_title">មានអ្វីថ្មី</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">បានបន្ថែម Face Cam</string>
-    <string name="whats_new_facecam_desc">សង្កត់ ២ វិនាទីលើរូបតំណាងកាមេរ៉ាក្នុងពពុះសម្រាប់ការកំណត់កាមេរ៉ា (ប្តូរមុខ/ក្រោយ, ប្តូរទំហំ, រាងរង្វង់/ចតុកោណ)។</string>
-    <string name="whats_new_widgets_title">បានបន្ថែម Widget ចំនួន ២</string>
-    <string name="whats_new_widgets_desc">បានបន្ថែម widget ថតរហ័ស 1×1 និងមជ្ឈមណ្ឌលបញ្ជា 1×2 ជាមួយប៊ូតុងបិទបើកសំឡេង កាមេរ៉ា និងទិសដៅផ្ទាល់។</string>
-    <string name="whats_new_fixes_title">ការជួសជុលកំហុសតូចតាច</string>
-    <string name="whats_new_fixes_desc">ញែកប្រអប់សារចាប់យកអេក្រង់ ធ្វើសមកាលកម្មស្ថានភាពកាមេរ៉ាផ្ទាល់ និងកែលម្អស្ថេរភាព។</string>
-    <string name="whats_new_btn">យល់ហើយ</string>
+
+
+
+
+
+
+
+
+
 </resources>

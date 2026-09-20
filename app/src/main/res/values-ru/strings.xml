@@ -163,13 +163,13 @@
     <string name="toast_camera_on">Оверлей камеры: ВКЛ</string>
     <string name="toast_camera_off">Оверлей камеры: ВЫКЛ</string>
     <string name="toast_camera_armed">Камера: ВКЛ (Запуск вместе с записью)</string>
-    <string name="whats_new_title">ЧТО НОВОГО</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">Добавлена Face Cam</string>
-    <string name="whats_new_facecam_desc">Удерживайте 2 сек. значок камеры в пузыре для настроек (смена передней/задней, размер, круг/прямоугольник).</string>
-    <string name="whats_new_widgets_title">Добавлены 2 виджета</string>
-    <string name="whats_new_widgets_desc">Добавлены виджеты 1×1 «Быстрая запись» и 1×2 «Пункт управления» с живыми переключателями звука, камеры и ориентации.</string>
-    <string name="whats_new_fixes_title">Небольшие исправления</string>
-    <string name="whats_new_fixes_desc">Изолирован диалог захвата экрана, синхронизирован статус камеры в реальном времени, улучшена стабильность.</string>
-    <string name="whats_new_btn">ПОНЯТНО</string>
+
+
+
+
+
+
+
+
+
 </resources>

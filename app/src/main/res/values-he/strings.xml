@@ -163,13 +163,13 @@
     <string name="toast_camera_on">שכבת מצלמה: פועל</string>
     <string name="toast_camera_off">שכבת מצלמה: כבוי</string>
     <string name="toast_camera_armed">מצלמה: פועל (מתחיל עם ההקלטה)</string>
-    <string name="whats_new_title">מה חדש</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">נוספה מצלמת פנים</string>
-    <string name="whats_new_facecam_desc">החזק 2 שניות על סמל המצלמה בבועה להגדרות מצלמה (החלפת קדמית/אחורית, שינוי גודל, צורת עיגול/מלבן).</string>
-    <string name="whats_new_widgets_title">נוספו 2 ווידג\'טים</string>
-    <string name="whats_new_widgets_desc">נוספו ווידג\'טים של 1×1 הקלטה מהירה ו-1×2 מרכז בקרה עם מתגי שמע, מצלמה וכיוון חיים.</string>
-    <string name="whats_new_fixes_title">תיקוני באגים קלים</string>
-    <string name="whats_new_fixes_desc">דיאלוג לכידת מסך מבודד, סטטוס מצלמה חיה מסונכרן ושיפורי יציבות.</string>
-    <string name="whats_new_btn">הבנתי</string>
+
+
+
+
+
+
+
+
+
 </resources>

@@ -163,13 +163,13 @@
     <string name="toast_camera_on">Superposició de càmera: ACTIVADA</string>
     <string name="toast_camera_off">Superposició de càmera: DESACTIVADA</string>
     <string name="toast_camera_armed">Càmera: ACTIVADA (Comença amb la gravació)</string>
-    <string name="whats_new_title">NOVETATS</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">S\'ha afegit càmera facial</string>
-    <string name="whats_new_facecam_desc">Mantingueu premuda 2 s la icona de la càmera a la bombolla per als paràmetres de la càmera (canvi frontal/posterior, redimensionar, forma rodona/rectangular).</string>
-    <string name="whats_new_widgets_title">S\'han afegit 2 ginys</string>
-    <string name="whats_new_widgets_desc">S\'han afegit els ginys 1×1 Gravació ràpida i 1×2 Centre de control amb controls d\'àudio en directe, càmera i orientació.</string>
-    <string name="whats_new_fixes_title">Correccions d\'errors menors</string>
-    <string name="whats_new_fixes_desc">Diàleg de captura de pantalla aïllat, estat de la càmera en directe sincronitzat i millores d\'estabilitat.</string>
-    <string name="whats_new_btn">ENTÈS</string>
+
+
+
+
+
+
+
+
+
 </resources>

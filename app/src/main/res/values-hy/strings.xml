@@ -163,13 +163,13 @@
     <string name="toast_camera_on">Տեսախցիկի շերտ: ՄԻԱՑՎԱԾ</string>
     <string name="toast_camera_off">Տեսախցիկի շերտ: ԱՆՋԱՏՎԱԾ</string>
     <string name="toast_camera_armed">Տեսախցիկ: ՄԻԱՑՎԱԾ (Սկսվում է ձայնագրման հետ)</string>
-    <string name="whats_new_title">ԻՆՉՆ Է ՆՈՐ</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">Ավելացվել է դեմքի տեսախցիկ</string>
-    <string name="whats_new_facecam_desc">Սեղմած պահեք 2 վրկ պղպջակի տեսախցիկի պատկերակին՝ կարգավորումների համար (փոխել առջևի/հետևի, չափափոխել, շրջան/ուղղանկյուն ձև):</string>
-    <string name="whats_new_widgets_title">Ավելացվել է 2 վիջեթ</string>
-    <string name="whats_new_widgets_desc">Ավելացվել են 1×1 Արագ ձայնագրում և 1×2 Կառավարման կենտրոն վիջեթներ՝ ձայնի, տեսախցիկի և ուղղվածության անջատիչներով:</string>
-    <string name="whats_new_fixes_title">Աննշան սխալների շտկումներ</string>
-    <string name="whats_new_fixes_desc">Էկրանի գրավման մեկուսացված պատուᱦան, ուղիղ տեսախցիկի սինխրონիզացված կարգավիճակ և կայունության բարելավումներ:</string>
-    <string name="whats_new_btn">ՊԱՐԶ Է</string>
+
+
+
+
+
+
+
+
+
 </resources>

@@ -163,13 +163,13 @@
     <string name="toast_camera_on">Camera Overlay: BUKAS</string>
     <string name="toast_camera_off">Camera Overlay: SARADO</string>
     <string name="toast_camera_armed">Kamera: BUKAS (Magsisimula kasabay ng pag-record)</string>
-    <string name="whats_new_title">MGA BAGONG TAMPOK</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">Nagdagdag ng Face Cam</string>
-    <string name="whats_new_facecam_desc">Pindutin nang 2 seg ang icon ng camera sa bula para sa mga setting ng cam (lumipat sa harap/likod, baguhin ang laki, bilog/parihabang hugis).</string>
-    <string name="whats_new_widgets_title">Nagdagdag ng 2 Widget</string>
-    <string name="whats_new_widgets_desc">Nagdagdag ng 1×1 Quick Record at 1×2 Control Center widget na may live na toggle para sa audio, camera, at oryentasyon.</string>
-    <string name="whats_new_fixes_title">Mga Minor na Pag-aayos</string>
-    <string name="whats_new_fixes_desc">Inhiwalay ang dialog ng pagkuha ng screen, sini-sync ang live status ng camera, at pinahusay ang katatagan.</string>
-    <string name="whats_new_btn">NAKUHA KO</string>
+
+
+
+
+
+
+
+
+
 </resources>

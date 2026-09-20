@@ -163,13 +163,13 @@
     <string name="toast_camera_on">Kameraren gainjartzea: AKTIBATUTA</string>
     <string name="toast_camera_off">Kameraren gainjartzea: DESAKTIBATUTA</string>
     <string name="toast_camera_armed">Kamera: AKTIBATUTA (Grabaketarekin batera hasten da)</string>
-    <string name="whats_new_title">BERRITASUNAK</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">Face Cam gehitu da</string>
-    <string name="whats_new_facecam_desc">Eduki sakatuta 2 segundoz kameraren ikonoa burbuilan kameraren ezarpenetarako (aldatu aurrealdea/atzealdea, tamaina aldatu, zirkulu/laukizuzen forma).</string>
-    <string name="whats_new_widgets_title">2 widget gehitu dira</string>
-    <string name="whats_new_widgets_desc">1×1 Grabaketa azkarra eta 1×2 Kontrol-zentroa widgetak gehitu dira zuzeneko audio, kamera eta orientazio etengailuekin.</string>
-    <string name="whats_new_fixes_title">Akats txikien konponketak</string>
-    <string name="whats_new_fixes_desc">Pantaila-argazkiaren elkarrizketa-koadro isolatua, kameraren zuzeneko egoera sinkronizatua eta egonkortasun hobekuntzak.</string>
-    <string name="whats_new_btn">ULERTUTA</string>
+
+
+
+
+
+
+
+
+
 </resources>

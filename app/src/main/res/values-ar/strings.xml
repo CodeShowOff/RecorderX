@@ -163,13 +163,13 @@
     <string name="toast_camera_on">تراكب الكاميرا: تفعيل</string>
     <string name="toast_camera_off">تراكب الكاميرا: إيقاف</string>
     <string name="toast_camera_armed">الكاميرا: تفعيل (تبدأ مع التسجيل)</string>
-    <string name="whats_new_title">ما الجديد</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">إضافة كاميرا الوجه</string>
-    <string name="whats_new_facecam_desc">اضغط لمدة ثانيتين على أيقونة الكاميرا في الفقاعة لإعدادات الكاميرا (تبديل الأمامية/الخلفية، تغيير الحجم، شكل دائري/مستطيل).</string>
-    <string name="whats_new_widgets_title">إضافة أداتين ذكيتين (Widgets)</string>
-    <string name="whats_new_widgets_desc">تمت إضافة أداتي 1×1 للتسجيل السريع و1×2 لمركز التحكم مع مفاتيح تبديل مباشرة للصوت والكاميرا والاتجاه.</string>
-    <string name="whats_new_fixes_title">إصلاحات أخطاء طفيفة</string>
-    <string name="whats_new_fixes_desc">نافذة التقاط شاشة معزولة، ومزامنة حالة الكاميرا المباشرة، وتحسينات في الاستقرار.</string>
-    <string name="whats_new_btn">فهمت</string>
+
+
+
+
+
+
+
+
+
 </resources>

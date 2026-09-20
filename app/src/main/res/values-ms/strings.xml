@@ -163,13 +163,13 @@
     <string name="toast_camera_on">Hamparan Kamera: HIDUP</string>
     <string name="toast_camera_off">Hamparan Kamera: PADAM</string>
     <string name="toast_camera_armed">Kamera: HIDUP (Bermula bersama rakaman)</string>
-    <string name="whats_new_title">APA YANG BAHARU</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">Menambah Face Cam</string>
-    <string name="whats_new_facecam_desc">Tekan 2 saat pada ikon kamera dalam gelembung untuk tetapan kamera (tukar depan/belakang, saiz semula, bentuk bulat/segi empat tepat).</string>
-    <string name="whats_new_widgets_title">Menambah 2 Widget</string>
-    <string name="whats_new_widgets_desc">Menambah widget Rakam Pantas 1×1 &amp; Pusat Kawalan 1×2 dengan togol langsung audio, kamera dan orientasi.</string>
-    <string name="whats_new_fixes_title">Pembetulan Pepijat Kecil</string>
-    <string name="whats_new_fixes_desc">Dialog tangkapan skrin diasingkan, status kamera langsung diselaraskan dan kestabilan ditingkatkan.</string>
-    <string name="whats_new_btn">FAHAM</string>
+
+
+
+
+
+
+
+
+
 </resources>

@@ -163,13 +163,13 @@
     <string name="toast_camera_on">Překrytí kamerou: ZAP</string>
     <string name="toast_camera_off">Překrytí kamerou: VYP</string>
     <string name="toast_camera_armed">Kamera: ZAP (Spustí se se záznamem)</string>
-    <string name="whats_new_title">CO JE NOVÉHO</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">Přidána Face Cam</string>
-    <string name="whats_new_facecam_desc">Podržte 2 s ikonu kamery v bublině pro nastavení (přepnutí přední/zadní, změna velikosti, tvar kruh/obdélník).</string>
-    <string name="whats_new_widgets_title">Přidány 2 widgety</string>
-    <string name="whats_new_widgets_desc">Přidány widgety 1×1 Rychlý záznam a 1×2 Ovládací centrum s přepínači zvuku, kamery a orientace v reálném čase.</string>
-    <string name="whats_new_fixes_title">Drobné opravy chyb</string>
-    <string name="whats_new_fixes_desc">Izolované dialogové okno snímání obrazovky, synchronizovaný stav živé kamery a vylepšení stability.</string>
-    <string name="whats_new_btn">ROZUMÍM</string>
+
+
+
+
+
+
+
+
+
 </resources>

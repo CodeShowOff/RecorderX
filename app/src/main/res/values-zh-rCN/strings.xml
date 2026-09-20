@@ -163,13 +163,13 @@
     <string name="toast_camera_on">摄像头画面：开启</string>
     <string name="toast_camera_off">摄像头画面：关闭</string>
     <string name="toast_camera_armed">摄像头：开启（随录屏一同启动）</string>
-    <string name="whats_new_title">更新内容</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">新增人脸出镜</string>
-    <string name="whats_new_facecam_desc">长按悬浮球中的相机图标 2 秒即可打开相机设置（前后摄切换、调整大小、圆形/矩形）。</string>
-    <string name="whats_new_widgets_title">新增 2 个桌面微件</string>
-    <string name="whats_new_widgets_desc">新增 1×1 快捷录屏与 1×2 控制中心桌面微件，支持实时切换音频、摄像头与屏幕方向。</string>
-    <string name="whats_new_fixes_title">问题修复与优化</string>
-    <string name="whats_new_fixes_desc">隔离屏幕录制确认对话框，同步实时摄像头状态，并提升整体稳定性。</string>
-    <string name="whats_new_btn">知道了</string>
+
+
+
+
+
+
+
+
+
 </resources>

@@ -163,13 +163,13 @@
     <string name="toast_camera_on">Kamera-oorleg: AAN</string>
     <string name="toast_camera_off">Kamera-oorleg: AF</string>
     <string name="toast_camera_armed">Kamera: AAN (Begin met opname)</string>
-    <string name="whats_new_title">WAT IS NUUT</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">Gesigskamera bygevoeg</string>
-    <string name="whats_new_facecam_desc">Hou die kamera-ikoon in die borrel vir 2 sekondes in vir kamera-instellings (wissel voor/agter, verander grootte, sirkel/reghoekvorm).</string>
-    <string name="whats_new_widgets_title">2 legstukke bygevoeg</string>
-    <string name="whats_new_widgets_desc">1×1 Vinnige opname en 1×2 Beheersentrum-legstukke bygevoeg met lewendige oudio-, kamera- en oriënteringskakelaars.</string>
-    <string name="whats_new_fixes_title">Klein foutoplossings</string>
-    <string name="whats_new_fixes_desc">Geïsoleerde skermopname-dialoog, gesinchroniseerde lewendige kamerastatus en stabiliteitverbeterings.</string>
-    <string name="whats_new_btn">HET DIT</string>
+
+
+
+
+
+
+
+
+
 </resources>

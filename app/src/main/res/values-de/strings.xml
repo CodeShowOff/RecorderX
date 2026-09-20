@@ -163,13 +163,13 @@
     <string name="toast_camera_on">Kamera-Overlay: EIN</string>
     <string name="toast_camera_off">Kamera-Overlay: AUS</string>
     <string name="toast_camera_armed">Kamera: EIN (Startet mit Aufnahme)</string>
-    <string name="whats_new_title">WAS GIBT\'S NEUES</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">Facecam hinzugefügt</string>
-    <string name="whats_new_facecam_desc">Kamerasymbol in der Blase 2 Sek. gedrückt halten für Kameraeinstellungen (vorne/hinten wechseln, Größe ändern, Kreis-/Rechteckform).</string>
-    <string name="whats_new_widgets_title">2 Widgets hinzugefügt</string>
-    <string name="whats_new_widgets_desc">1×1 Schnellaufnahme &amp; 1×2 Kontrollzentrum Widgets mit Live-Umschaltern für Audio, Kamera und Ausrichtung hinzugefügt.</string>
-    <string name="whats_new_fixes_title">Kleinere Fehlerbehebungen</string>
-    <string name="whats_new_fixes_desc">Isolierter Bildschirmaufnahme-Dialog, synchronisierter Live-Kamerastatus und Stabilitätsverbesserungen.</string>
-    <string name="whats_new_btn">VERSTANDEN</string>
+
+
+
+
+
+
+
+
+
 </resources>

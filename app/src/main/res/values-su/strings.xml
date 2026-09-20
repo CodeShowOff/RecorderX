@@ -163,13 +163,13 @@
     <string name="toast_camera_on">Lapisan Kaméra: HURUNG</string>
     <string name="toast_camera_off">Lapisan Kaméra: PAEUM</string>
     <string name="toast_camera_armed">Kaméra: HURUNG (Mimitian babarengan ngarékam)</string>
-    <string name="whats_new_title">NU ANYAR</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">Nambihan Face Cam</string>
-    <string name="whats_new_facecam_desc">Tahan 2 detik dina ikon kaméra dina gelembung pikeun setelan kaméra (ganti hareup/tukang, robah ukuran, bentuk bunder/pasagi panjang).</string>
-    <string name="whats_new_widgets_title">Nambihan 2 Widget</string>
-    <string name="whats_new_widgets_desc">Nambihan widget Rékam Gancang 1×1 &amp; Puseur Kontrol 1×2 kalayan toggle langsung audio, kaméra, jeung orientasi.</string>
-    <string name="whats_new_fixes_title">Ngalereskeun Bug Leutik</string>
-    <string name="whats_new_fixes_desc">Dialog néwak layar dipisahkeun, status kaméra langsung disinkronkeun, sarta ningkatkeun stabilitas.</string>
-    <string name="whats_new_btn">NGARTI</string>
+
+
+
+
+
+
+
+
+
 </resources>

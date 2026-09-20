@@ -163,13 +163,13 @@
     <string name="toast_camera_on">Kameraoverlegg: PÅ</string>
     <string name="toast_camera_off">Kameraoverlegg: AV</string>
     <string name="toast_camera_armed">Kamera: PÅ (Starter med opptak)</string>
-    <string name="whats_new_title">HVA ER NYTT</string>
-    <string name="whats_new_version">v3.1.1</string>
-    <string name="whats_new_facecam_title">Lagt til Face Cam</string>
-    <string name="whats_new_facecam_desc">Hold kameraikonet i boblen i 2 sek for kamerainnstillinger (bytt foran/bak, endre størrelse, sirkel/rektangel).</string>
-    <string name="whats_new_widgets_title">Lagt til 2 widgeter</string>
-    <string name="whats_new_widgets_desc">Lagt til 1×1 Hurtigopptak og 1×2 Kontrollsenter widgeter med direktebrytere for lyd, kamera og retning.</string>
-    <string name="whats_new_fixes_title">Mindre feilrettinger</string>
-    <string name="whats_new_fixes_desc">Isolert skjermopptaksdialog, synkronisert live-kamerastatus og stabilitetsforbedringer.</string>
-    <string name="whats_new_btn">FORSTÅTT</string>
+
+
+
+
+
+
+
+
+
 </resources>
