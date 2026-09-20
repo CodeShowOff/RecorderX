@@ -20,7 +20,7 @@
     </style>
 
     <style name="Widget.Custom.Tooltip" parent="Widget.Material3.Tooltip">
-        <item name="backgroundTint">@color/slider_blue</item>
+        <item name="backgroundTint">@color/slider_red</item>
         <item name="android:textColor">@color/bg_main</item>
     </style>
 </resources>

@@ -643,6 +643,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             ContextCompat.startForegroundService(this, intent);
             btnRecord.setText(R.string.stop_recording);
+            moveTaskToBack(true);
         } catch (Exception e) {
             android.util.Log.e("RecorderX_Main", "Failed to start service", e);
             Toast.makeText(this, R.string.toast_start_recorder_failed, Toast.LENGTH_SHORT).show();
