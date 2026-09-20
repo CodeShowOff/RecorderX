@@ -1,3 +1,5 @@
+// Note: This file has been modified from its original version by the RecorderX derivative project.
+// The original repository was developed by Chinmai H B (snap24) under the Apache License 2.0.
 package com.codeshowoff.recorder;
 
 import android.content.Context;

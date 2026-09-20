@@ -71,6 +71,15 @@ adb install -r -d app/build/outputs/apk/release/app-release.apk
 ```
 
 
+## License
+
+<a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg?style=for-the-badge&logo=apache" height="40" alt="Apache 2.0"></a>
+
+This project is a modified version of the original RecorderX application developed by Chinmai H B (snap24).
+You can find the original repository at: [snap24/RecorderX](https://github.com/snap24/RecorderX)
+
+It is licensed under the Apache License 2.0. See [LICENSE](LICENSE) for details.
+
 ---
 <div align="center">
   Maintained by Open Source Community

@@ -29,9 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private SettingsManager settingsManager;
     private Button btnRecord;
     private boolean isWarningDialogShowing = false;
-    private android.os.Handler titleToggleHandler;
-    private Runnable titleToggleRunnable;
-    private boolean isShowingTitleText = true;
+
 
     private static final int[] ACCENT_COLORS = {
         android.graphics.Color.parseColor("#9575CD"), // 0: Lavender (Default)
@@ -164,68 +162,9 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        // Initialize swipe customizer onboarding hint next to the title
-        android.widget.ImageView swipeHintIcon = findViewById(R.id.swipeHintIcon);
-        android.widget.TextView titleMain = findViewById(R.id.titleMain);
         android.widget.TextView titleX = findViewById(R.id.titleX);
-        
-        android.content.SharedPreferences uiPrefs = getSharedPreferences("ui_prefs", MODE_PRIVATE);
-        boolean shown = uiPrefs.getBoolean("swipe_color_onboarding_shown", false);
-        if (!shown) {
-            int launchCount = uiPrefs.getInt("swipe_hint_launch_count", 0) + 1;
-            uiPrefs.edit().putInt("swipe_hint_launch_count", launchCount).apply();
-
-            if (launchCount >= 3) {
-                uiPrefs.edit().putBoolean("swipe_color_onboarding_shown", true).apply();
-                dismissSwipeHint();
-            } else {
-                if (titleX != null) titleX.setVisibility(android.view.View.GONE);
-                
-                if (swipeHintIcon != null) {
-                swipeHintIcon.setVisibility(android.view.View.VISIBLE);
-                swipeHintIcon.setImageTintList(android.content.res.ColorStateList.valueOf(getActiveAccentColor()));
-                
-                // Play horizontal translate/slide animation
-                android.view.animation.TranslateAnimation anim = new android.view.animation.TranslateAnimation(
-                    android.view.animation.Animation.RELATIVE_TO_SELF, -0.15f,
-                    android.view.animation.Animation.RELATIVE_TO_SELF, 0.15f,
-                    android.view.animation.Animation.RELATIVE_TO_SELF, 0.0f,
-                    android.view.animation.Animation.RELATIVE_TO_SELF, 0.0f
-                );
-                anim.setDuration(800);
-                anim.setRepeatCount(android.view.animation.Animation.INFINITE);
-                anim.setRepeatMode(android.view.animation.Animation.REVERSE);
-                anim.setInterpolator(new android.view.animation.AccelerateDecelerateInterpolator());
-                swipeHintIcon.startAnimation(anim);
-            }
-            
-            // Loop title text: RECORDER X <-> SWIPE HERE
-            titleToggleHandler = new android.os.Handler(android.os.Looper.getMainLooper());
-            titleToggleRunnable = new Runnable() {
-                @Override
-                public void run() {
-                    if (titleMain != null) {
-                        if (isShowingTitleText) {
-                            titleMain.setText(R.string.title_swipe_here);
-                        } else {
-                            titleMain.setText(R.string.app_name);
-                        }
-                        isShowingTitleText = !isShowingTitleText;
-                    }
-                    if (titleToggleHandler != null) {
-                        titleToggleHandler.postDelayed(this, 1000);
-                    }
-                }
-            };
-            titleToggleHandler.postDelayed(titleToggleRunnable, 1000);
-            }
-        } else {
-            if (swipeHintIcon != null) swipeHintIcon.setVisibility(android.view.View.GONE);
-            if (titleMain != null) titleMain.setText(R.string.title_recorder);
-            if (titleX != null) {
-                titleX.setVisibility(android.view.View.VISIBLE);
-                startXPulseAnimation();
-            }
+        if (titleX != null) {
+            titleX.setVisibility(android.view.View.VISIBLE);
         }
     }
 
@@ -242,7 +181,7 @@ public class MainActivity extends AppCompatActivity {
         btnRecord = findViewById(R.id.btnRecord);
         btnRecord.setOnClickListener(v -> toggleRecording());
 
-        android.widget.TextView btnThemeToggle = findViewById(R.id.btnThemeToggle);
+        android.widget.ImageView btnThemeToggle = findViewById(R.id.btnThemeToggle);
         android.content.SharedPreferences themePrefs = getSharedPreferences("theme_prefs", MODE_PRIVATE);
         
         boolean isManual = themePrefs.getBoolean("is_manual_theme", false);
@@ -257,8 +196,8 @@ public class MainActivity extends AppCompatActivity {
             activeMode = (currentNightMode == android.content.res.Configuration.UI_MODE_NIGHT_YES) ? 1 : 0;
         }
         
-        // In Light mode (0), show D. In Dark mode (1), show L.
-        btnThemeToggle.setText(activeMode == 0 ? "D" : "L");
+        // In Light mode (0), show Moon. In Dark mode (1), show Sun.
+        btnThemeToggle.setImageResource(activeMode == 0 ? R.drawable.ic_dark_mode : R.drawable.ic_light_mode);
         
         btnThemeToggle.setOnClickListener(v -> {
             boolean wasManual = themePrefs.getBoolean("is_manual_theme", false);
@@ -340,110 +279,11 @@ public class MainActivity extends AppCompatActivity {
             dialog.show();
         });
 
-        findViewById(R.id.btnOpenRecordings).setOnClickListener(v -> {
-            try {
-                java.io.File folder = new java.io.File(android.os.Environment.getExternalStoragePublicDirectory(android.os.Environment.DIRECTORY_MOVIES), "RecorderX");
-                if (!folder.exists() || folder.listFiles() == null) {
-                    Toast.makeText(this, R.string.toast_no_recordings, Toast.LENGTH_SHORT).show();
-                    return;
-                }
 
-                java.io.File[] files = folder.listFiles((dir, name) -> {
-                    String lower = name.toLowerCase();
-                    return lower.endsWith(".mp4") || lower.endsWith(".mkv") || lower.endsWith(".webm") || lower.endsWith(".ts");
-                });
-
-                if (files == null || files.length == 0) {
-                    Toast.makeText(this, R.string.toast_no_recordings, Toast.LENGTH_SHORT).show();
-                    return;
-                }
-
-                // Find the latest recorded file by lastModified timestamp
-                java.io.File lastFile = files[0];
-                for (int i = 1; i < files.length; i++) {
-                    if (files[i].lastModified() > lastFile.lastModified()) {
-                        lastFile = files[i];
-                    }
-                }
-
-                android.net.Uri fileUri = null;
-                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.Q) {
-                    try (android.database.Cursor cursor = getContentResolver().query(
-                            android.provider.MediaStore.Video.Media.EXTERNAL_CONTENT_URI,
-                            new String[]{android.provider.MediaStore.Video.Media._ID},
-                            android.provider.MediaStore.Video.Media.DATA + "=? OR " + android.provider.MediaStore.Video.Media.DISPLAY_NAME + "=?",
-                            new String[]{lastFile.getAbsolutePath(), lastFile.getName()},
-                            android.provider.MediaStore.Video.Media._ID + " DESC")) {
-                        if (cursor != null && cursor.moveToFirst()) {
-                            long id = cursor.getLong(cursor.getColumnIndexOrThrow(android.provider.MediaStore.Video.Media._ID));
-                            fileUri = android.content.ContentUris.withAppendedId(android.provider.MediaStore.Video.Media.EXTERNAL_CONTENT_URI, id);
-                        }
-                    } catch (Exception ignored) {}
-                }
-                if (fileUri == null) {
-                    fileUri = androidx.core.content.FileProvider.getUriForFile(this, getPackageName() + ".provider", lastFile);
-                }
-
-                Intent viewIntent = new Intent(Intent.ACTION_VIEW);
-                viewIntent.setDataAndType(fileUri, "video/*");
-                viewIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-
-                startActivity(viewIntent);
-            } catch (android.content.ActivityNotFoundException e) {
-                Toast.makeText(this, R.string.toast_no_video_player, Toast.LENGTH_SHORT).show();
-            } catch (Exception e) {
-                Toast.makeText(this, R.string.toast_no_recordings, Toast.LENGTH_SHORT).show();
-            }
-        });
             
-        // Initialize invisible color slider over RECORDER X title area overlay
-        android.view.View colorTouchArea = findViewById(R.id.colorTouchArea);
-        if (colorTouchArea != null) {
-            colorTouchArea.setOnTouchListener(new android.view.View.OnTouchListener() {
-                private float startX;
-                
-                @android.annotation.SuppressLint("ClickableViewAccessibility")
-                @Override
-                public boolean onTouch(android.view.View v, android.view.MotionEvent event) {
-                    if (v.getParent() != null) {
-                        v.getParent().requestDisallowInterceptTouchEvent(true);
-                    }
-                    switch (event.getAction()) {
-                        case android.view.MotionEvent.ACTION_DOWN:
-                            startX = event.getRawX();
-                            return true;
-                            
-                        case android.view.MotionEvent.ACTION_UP:
-                            float deltaX = event.getRawX() - startX;
-                            float density = v.getResources().getDisplayMetrics().density;
-                            float threshold = 8 * density; // Super sensitive 8dp threshold for quick little swipes!
-                            
-                            if (Math.abs(deltaX) > threshold) {
-                                int currentIdx = themePrefs.getInt("accent_color_index", 1);
-                                int newIdx;
-                                if (deltaX > 0) {
-                                    // Swipe Right -> Next Color
-                                    newIdx = (currentIdx + 1) % ACCENT_COLORS.length;
-                                } else {
-                                    // Swipe Left -> Previous Color
-                                    newIdx = (currentIdx - 1 + ACCENT_COLORS.length) % ACCENT_COLORS.length;
-                                }
-                                themePrefs.edit().putInt("accent_color_index", newIdx).apply();
-                                applyAccentColor(ACCENT_COLORS[newIdx]);
-                                dismissSwipeHint();
-                            } else {
-                                v.performClick();
-                            }
-                            return true;
-                    }
-                    return false;
-                }
-            });
-        }
 
-        // Apply saved accent color on startup (default to Yellow: index 1)
-        int savedColorIndex = themePrefs.getInt("accent_color_index", 1);
-        applyAccentColor(ACCENT_COLORS[savedColorIndex]);
+
+        // Startup color application removed
 
         // Localize option tick labels dynamically from string arrays
         String[] orientOpts = getResources().getStringArray(R.array.orientation_options);
@@ -853,88 +693,10 @@ public class MainActivity extends AppCompatActivity {
         ControlCenterWidgetProvider.updateAllWidgets(this);
     }
 
-    private void applyAccentColor(int color) {
-        // 0. Make colorTouchArea fully invisible (no border)
-        android.view.View colorTouchArea = findViewById(R.id.colorTouchArea);
-        if (colorTouchArea != null) {
-            colorTouchArea.setBackground(null);
-        }
-        
-        android.widget.ImageView swipeHintIcon = findViewById(R.id.swipeHintIcon);
-        if (swipeHintIcon != null && swipeHintIcon.getVisibility() == android.view.View.VISIBLE) {
-            swipeHintIcon.setImageTintList(android.content.res.ColorStateList.valueOf(color));
-        }
 
-        // 1. Title
-        android.widget.TextView titleMain = findViewById(R.id.titleMain);
-        if (titleMain != null) titleMain.setTextColor(color);
-        android.widget.TextView titleX = findViewById(R.id.titleX);
-        if (titleX != null) titleX.setTextColor(color);
-        
-        // 2. Headers
-        android.widget.TextView headerVideo = findViewById(R.id.headerVideoSubsystem);
-        if (headerVideo != null) headerVideo.setTextColor(color);
-        android.widget.TextView headerAudio = findViewById(R.id.headerAudioSubsystem);
-        if (headerAudio != null) headerAudio.setTextColor(color);
-        
-        // 3. Button
-        if (btnRecord != null) {
-            btnRecord.setBackgroundTintList(android.content.res.ColorStateList.valueOf(color));
-        }
-        
-        // 4. Sliders
-        int[] sliderIds = {
-            R.id.codecSlider, R.id.orientationSlider, R.id.resolutionSlider,
-            R.id.fpsSlider, R.id.bitrateSlider, R.id.bitrateModeSlider,
-            R.id.audioSlider, R.id.audioQualitySlider
-        };
-        for (int id : sliderIds) {
-            com.google.android.material.slider.Slider slider = findViewById(id);
-            if (slider != null) {
-                slider.setTrackActiveTintList(android.content.res.ColorStateList.valueOf(color));
-            }
-        }
-        
-        // 5. Switch
-        com.google.android.material.switchmaterial.SwitchMaterial switchFloating = findViewById(R.id.switchFloatingControl);
-        if (switchFloating != null) {
-            switchFloating.setTrackTintList(android.content.res.ColorStateList.valueOf(color));
-        }
-
-        // 5b. Language Button Border
-        com.google.android.material.button.MaterialButton btnLanguage = findViewById(R.id.btnLanguage);
-        if (btnLanguage != null) {
-            btnLanguage.setStrokeColor(android.content.res.ColorStateList.valueOf(color));
-        }
-        
-        // 6. TextInputLayout
-        com.google.android.material.textfield.TextInputLayout layoutTemplate = findViewById(R.id.namingTemplateLayout);
-        if (layoutTemplate != null) {
-            int[][] states = new int[][] {
-                new int[] { android.R.attr.state_focused },
-                new int[] { android.R.attr.state_enabled },
-                new int[] {}
-            };
-            int[] colors = new int[] { color, color, color };
-            android.content.res.ColorStateList stateList = new android.content.res.ColorStateList(states, colors);
-
-            layoutTemplate.setHintTextColor(stateList);
-            layoutTemplate.setDefaultHintTextColor(stateList);
-            layoutTemplate.setBoxStrokeColor(color);
-            layoutTemplate.setBoxStrokeColorStateList(stateList);
-        }
-
-        // 7. Dynamic text spans
-        setupNamingTemplateHelper();
-    }
 
     private int getActiveAccentColor() {
-        android.content.SharedPreferences themePrefs = getSharedPreferences("theme_prefs", MODE_PRIVATE);
-        int index = themePrefs.getInt("accent_color_index", 1); // Default to Yellow (index 1)
-        if (index < 0 || index >= ACCENT_COLORS.length) {
-            index = 1;
-        }
-        return ACCENT_COLORS[index];
+        return getResources().getColor(R.color.text_primary, getTheme());
     }
 
     private void setupNamingTemplateHelper() {
@@ -1001,59 +763,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void dismissSwipeHint() {
-        android.widget.ImageView swipeHintIcon = findViewById(R.id.swipeHintIcon);
-        if (swipeHintIcon != null && swipeHintIcon.getVisibility() == android.view.View.VISIBLE) {
-            android.view.animation.AlphaAnimation fadeOut = new android.view.animation.AlphaAnimation(1f, 0f);
-            fadeOut.setDuration(400);
-            fadeOut.setAnimationListener(new android.view.animation.Animation.AnimationListener() {
-                @Override public void onAnimationStart(android.view.animation.Animation animation) {}
-                @Override public void onAnimationRepeat(android.view.animation.Animation animation) {}
-                @Override
-                public void onAnimationEnd(android.view.animation.Animation animation) {
-                    swipeHintIcon.clearAnimation();
-                    swipeHintIcon.setVisibility(android.view.View.GONE);
-                }
-            });
-            swipeHintIcon.startAnimation(fadeOut);
-            
-            // Stop the title looping text handler
-            if (titleToggleHandler != null && titleToggleRunnable != null) {
-                titleToggleHandler.removeCallbacks(titleToggleRunnable);
-                titleToggleHandler = null;
-                titleToggleRunnable = null;
-            }
-            
-            // Show custom pulsing X letter
-            android.widget.TextView titleMain = findViewById(R.id.titleMain);
-            android.widget.TextView titleX = findViewById(R.id.titleX);
-            if (titleMain != null) titleMain.setText(R.string.title_recorder);
-            if (titleX != null) {
-                titleX.setVisibility(android.view.View.VISIBLE);
-                startXPulseAnimation();
-            }
-            
-            getSharedPreferences("ui_prefs", MODE_PRIVATE)
-                .edit().putBoolean("swipe_color_onboarding_shown", true).apply();
-        }
-    }
 
-    private void startXPulseAnimation() {
-        android.widget.TextView titleX = findViewById(R.id.titleX);
-        if (titleX != null) {
-            titleX.clearAnimation();
-            android.view.animation.ScaleAnimation pulse = new android.view.animation.ScaleAnimation(
-                1.0f, 1.8f, 1.0f, 1.8f,
-                android.view.animation.Animation.RELATIVE_TO_SELF, 0.5f,
-                android.view.animation.Animation.RELATIVE_TO_SELF, 0.5f
-            );
-            pulse.setDuration(600);
-            pulse.setRepeatCount(android.view.animation.Animation.INFINITE);
-            pulse.setRepeatMode(android.view.animation.Animation.REVERSE);
-            pulse.setInterpolator(new android.view.animation.AccelerateDecelerateInterpolator());
-            titleX.startAnimation(pulse);
-        }
-    }
+
+
 
     private boolean isHardwareAv1EncoderAvailable() {
         if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.Q) return false;
