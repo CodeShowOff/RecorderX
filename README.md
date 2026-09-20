@@ -4,7 +4,11 @@
   <img src=".github/assets/iconz.png" width="256" height="256" />
   <br>
 
-  [![Latest Version](https://img.shields.io/badge/Version-v3.1.1-9575CD?style=flat&logo=github&logoColor=white)](https://github.com/YourOrg/RecorderX/releases)
+  <a href="https://github.com/CodeShowOff/RecorderX/raw/main/releases/RecorderX-v3.1.1.apk">
+    <img src="https://img.shields.io/badge/Download_APK-v3.1.1-3FA9F5?style=for-the-badge&logo=android&logoColor=white" alt="Download APK" />
+  </a>
+  <br><br>
+
   ![Java](https://img.shields.io/badge/Java-21-ED8B00?style=flat&logo=openjdk&logoColor=white)
   ![Android](https://img.shields.io/badge/API-29%2B-3DDC84?style=flat&logo=android&logoColor=white)
 
